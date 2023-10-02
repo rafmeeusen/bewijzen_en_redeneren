@@ -1,0 +1,84 @@
+% to change the appearance of the header, questions, problems or subproblems, see the homework.cls file or
+% override the \Problem, \Subproblem, \question or \printtitle commands.
+
+% The hidequestions option hides the questions. Remove it to print the questions in the text.
+\documentclass[hidequestions]{homework}
+
+\usepackage{amsthm}
+\renewcommand*{\proofname}{Bewijs}
+
+% Set up your name, the course name and the homework set number.
+\homeworksetup{
+    username={Raf Meeusen},
+    course={Bewijzen en redeneren},
+    setnumber=2}
+\begin{document}% this also prints the header.
+
+% use starred problems or subproblems to apply manual numbering.
+\problem*{1}
+
+
+Gegeven:
+\[a, b, c, d \in \mathbb{R}\] 
+\begin{equation}\label{gegeven1}a + b = c + d\end{equation}
+\begin{equation}\label{gegeven2}ab = cd\end{equation}
+
+Te bewijzen: 
+ofwel geldt: \(a=c\) en \(b=d\) , ofwel geldt: \(a=d\) en \(b=c\). 
+
+
+\begin{proof}
+Laat ons eerst het 'te bewijzen' nader beschouwen. 
+Stel dat \(a=c\), dan volgt uit (\ref{gegeven1}) dat \(b=d\). Op deze manier kunnen we inzien dat zodra we \'{e}\'{e}n van de volgende gelijkheden hebben aangetoond, het vervolg van het bewijs triviaal is: 
+
+\(a=c\) of \(a=d\) of \(b=c\) of \(b=d\). 
+
+
+Als \(a = 0\), dan volgt uit (\ref{gegeven2}) dat \(c = 0\) of  \(d = 0\), waaruit volgt dat \(a = c\) of \(a = d\), en de stelling bewezen is. Een gelijkaardige redenering kan gevolgd worden voor de gevallen \(b = 0\), \(c = 0\) en \(d = 0\). 
+
+Het vervolg van het bewijs gaat over de gevallen waarbij  \(a \neq 0\),  \(b \neq 0\),  \(c \neq 0\) en  \(d \neq 0\). Beschouwen we de vergelijkingen (\ref{gegeven1}) en (\ref{gegeven2}) als een stelsel van vergelijkingen in de veranderlijken \(a\) en \(c\), met \(b\) en \(d\) constanten, en herschrijven we dit stelsel als: 
+\[\left\{ 
+\begin{aligned}
+a-c &= d-b\\
+ba -dc &= 0 
+\end{aligned} 
+\right.\]
+
+De uitbreide matrix voor dit stelsel is dan: 
+$\begin{pmatrix}
+1 & -1 & d-b\\
+b & -d & 0
+\end{pmatrix}$
+
+Aangezien \(b \neq 0\) mogen we de rijoperatie $R_1 \longrightarrow R_1 - \frac{1}{b}R_2$ doen en krijgen we: 
+\begin{equation}\label{matrix1}
+\begin{pmatrix}
+0 & \frac{d-b}{b} & d-b\\
+b & -d & 0
+\end{pmatrix}
+\end{equation}
+
+Als \(b=d\), dan is de stelling sowieso bewezen. Als \(b \neq d\), dan heeft het stelsel met matrix (\ref{matrix1}) exact 1 oplossing, waarbij uit de eerste rij volgt dat \(c=b\), en de stelling ook bewezen is. 
+
+\end{proof}
+
+
+
+
+
+\problem
+
+Neem aan dat de getallen \[a_0, a_1, a_2, . . .\] voldoen aan \[a_0 = a_1 = 1\] en
+
+\[a_{n+1} a_{n-1} = pa_n^2\] 
+
+voor \[n \in \mathbb{N}_0\]
+ 
+Hierin is \[p > 0\] een vast gekozen re\"{e}el getal. 
+Bewijs dat \[a_n = p\] 
+
+
+
+\end{document}
+
+
