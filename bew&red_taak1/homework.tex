@@ -62,23 +62,51 @@ Als \(b=d\), dan is de stelling sowieso bewezen. Als \(b \neq d\), dan heeft het
 
 \end{proof}
 
-
-
-
-
 \problem
-
-Neem aan dat de getallen \[a_0, a_1, a_2, . . .\] voldoen aan \[a_0 = a_1 = 1\] en
-
-\[a_{n+1} a_{n-1} = pa_n^2\] 
-
-voor \[n \in \mathbb{N}_0\]
- 
-Hierin is \[p > 0\] een vast gekozen re\"{e}el getal. 
-Bewijs dat \[a_n = p\] 
-
-
+(krijg ik niet meer klaar tegen vrijdag)
 
 \end{document}
 
 
+DRAFT
+
+voor k $\leq$ n: 
+\[a_n = p^{ \frac{n!}{2!(n-2)!} }\] 
+
+$a_n = p^{\frac{n(n-1)}{2}}$
+
+
+Gegeven: 
+
+\begin{itemize}
+    \item $a_0, a_1, a_2, ... \in \mathbb{R}$
+    \item $a_0 = 1$
+    \item $a_1 = 1$
+    \item $a_{n+1} a_{n-1} = pa_n^2$ voor $n \in \mathbb{N}_0$, $p \in \mathbb{R}$, en $p > 0$ 
+
+\end{itemize}
+
+Bewijs dat 
+\[a_n = p^{\binom{n}{2}}\] 
+
+
+
+\begin{proof}
+We bewijzen de stelling door volledige inductie. 
+Kijken we eerst na dat $a_n = p^{\binom{n}{2}}$  geldig is voor $n=0$ en $n=1$, en niet conflicteert met de gegevens: 
+
+\[a_0 = p^{\binom{0}{2}} = p^0 = 1 \] 
+\[a_1 = p^{\binom{1}{2}} = p^0 = 1 \] 
+
+Voorgaande  beschouwen we als de basisstap van ons inductiebewijs. Nu moeten we nog aantonen dat 
+$a_{n+2} = p^{\binom{n+2}{2}}$ , gegeven de inductiehypothese  
+$a_{n+1} = p^{\binom{n+1}{2}}$ en $a_{n} = p^{\binom{n}{2}}$, voor $n \geq 0$. 
+
+Als $n \geq 0$, dan is $p^{\binom{n+2}{2}} = p^{\frac{(n+2)(n+1)}{2}} = p^{blabla}$
+
+
+
+
+
+
+\end{proof}
