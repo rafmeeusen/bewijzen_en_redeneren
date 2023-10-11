@@ -138,7 +138,101 @@ Combinaties kwantoren. Volgorde is van belang.
 
 Negatie ($\lnot$) van de $\forall$ wordt een $\exists$. Negatie van de $\exists$ wordt een $\forall$. 
 
+\section{Oefenzitting 2, 11 okt}
 
+
+\subsection{Voorbereidingsoefeningen voor thuis} 
+
+Oefening 2.1.2. Bewijs onderdeel (c) van Stelling 2.1.10 met behulp van Venndiagrammen.
+(niet afgemaakt, maar zou wel lukken) 
+Deel a) $A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $
+Venn-diagram: met 8 gebieden (1 buiten alle verzamelingen, 1 doorsnede van de drie, 3 zonder doorsnede, 3 doorsnedes twee-aan-twee). 
+Dan nagaan dat voor elk gebied geldt dat wat links zit, ook rechts zit, en wat rechts zit, ook links zit. 
+
+Deel b) $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+Gelijkaardig. 
+
+Oefening 2.1.3. Bewijs onderdeel (d) van Stelling 2.1.10 met behulp van waarheidstabellen.
+(de wetten van De Morgan)
+Deel a) $(A \cup B)^c = A^c \cap B^c$ 
+
+Deel b) $(A \cap B)^c = A^c \cup B^c$ 
+
+Bewijs met waarheidstabellen: niet gemaakt, maar zou wel lukken denk ik. 
+
+
+
+Oefening 2.2.1. Onderzoek of de volgende beweringen waar of niet waar zijn en geef een
+bewijs.
+\begin{itemize}
+\item a) niet waar, bvb. $m=2$ en $n=1$
+\item b) waar ; bewijs is ook voorbeeld nemen
+\item c) waar ; bewijs: kies n=m 
+\item d) niet waar; bewijs: ik vind altijd een n waarvoor het niet klopt
+\item e) waar
+\item f) niet waar
+
+\end{itemize}
+
+
+
+Oefening 2.2.7. Een deelverzameling $A \subset R$ is naar boven begrensd als ... Geef een negatie van deze bewering. 
+
+OK, eens gemaakt. Moet je echt stap voor stap doen, negatie eerst binnen brengen in eerste kwantor, dan in tweede kwantor. Pas in tweede stap wordt propositie omgekeerd naar $a>x$. 
+
+\subsection{Oefenzitting}
+
+Oefening 2.1.1. Bewijs de eerste uitspraak van onderdeel (c) van Stelling 2.1.10 met een logische redenering.
+Deel a) $A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $. Oefening gemaakt voor ene inclusie: voor een $x$ in linkse verzameling geldt dat die ook in de rechtse zit (x zit in A of in B doorsnede C, gevalsonderscheiding, geval x in A, dan ook in A unie B, en ook in A unie C, dus ook in de doorsnede). Etc. etc. 
+Ene richting bewijs is de truuk om uit te breiden met unie, wat altijd mag (als x in A zit, dan ook in A unie whatever). Dan ook omgekeerd. Is wat moeilijker, vind ik. 
+
+2.1.4 (b) bewijs equivalentie 
+$ A \subset B \Leftrightarrow A \cap B = A$
+Bewijs in twee grote stappen, de twee implicaties. Implicatie van links naar rechts: stel dat A deelverzameling van B, dan zou volgen dat $A \cap B = A$. Deze gelijkheid van verzamelingen tonen we aan met twee inclusies: $A \cap B \subset A$ en $A \subset A \cap B $. 
+Eerste inclusie is altijd geldig, tweede inclusie geldt omdat we weten dat $ A \subset B$. Te redeneren met willekeurige x in $A$ etc. etc. 
+
+Oefening 2.1.5 i.v.m. symmetrisch verschil. a) bewijs dat gelijk is aan unie van verschilverzamelingen. Zal wel gelijkaardig zijn als andere bewijzen met verzamelingen. Niet helemaal uitgewerkt maar wel over nagedacht. b) wanneer is deze leeg? Antwoord: als $A=B$. Om te bewijzen: als $A=B$ dan $A \Delta B = \emptyset$. Niet zo evident. Wanneer is een $A \setminus B $ leeg? Alleen als $A \subset B$. 
+c) Dit is het geval als B leeg is. 
+Oplossing op bord in oefenzitting voor a) maakt gebruik van eigenschap $X \setminus Y = X \cap Y^c$. Dus lijkt me een tip: veel eigenschappen van verzamelingen proberen te gebruiken bij zo'n bewijs. Deel a) kan dus bewezen worden door helemaal uit te schrijven en te herschrijven vanuit definitie. 
+
+
+Oefening 2.1.9a: gemaakt. Eerst alle drie verzamelingen koppels uitgeschreven: $A \times (B \cup C) = \{ (a,x) | ...$. Dan door twee inclusies aangetoond dat links en rechts hetzelfde zijn. 
+Oefening 2.1.9b: niet meer gemaakt. 
+Oefening 2.1.9c: niet meer gemaakt. 
+
+Oefening 2.1.10: OK, dat lukte me wel. Gewoon aangetoond dat willekeurig koppel uit linkse verzameling altijd in de rechtse zit. 
+
+Oefening 2.2.2 per ongeluk begonnen:
+\begin{itemize}
+    \item b) niet waar, er is voor elke x maar 1 y die eraan voldoet
+    \item c) waar
+\end{itemize}
+
+Oefening 2.2.6: Antwoord is Ja. op bord gestaan in oefenzitting. Eigenlijk gewoon in tekst geschreven hoe je dit redeneert/inziet. Nogal triviaal, via aan $a_0$ die bestaat, en die je dan gebruikt om het aan te tonen. 
+
+
+Oefening 2.2.9
+
+Oefening 2.2.10
+
+Oefening 2.2.12
+
+
+\section{huistaak week 2 vraag 2}
+
+Nog aan gewerkt na deadline. 
+Gelukt. 
+Kwam erop neer $a_{n+2}=p^{[1+2\binom{n+1}{2}-\binom{n}{2}]}$ uit te rekenen en te zien dat het gelijk is aan $p^{\binom{n+2}{2}}$. Gedaan gebruikmakend van $\binom{n}{2} = \frac{n(n-1)}{2}$. 
+
+\section{Les 3, 11 okt}
+
+Hoofdstuk 3. Relaties. Definitie als deelverzameling van cartesisch product. Dus een koppel $(x,y)$ kan element zijn van de relatie $R$. Iets formeler kan een relatie ook gedefinieerd worden als drietal $(R,X,Y)$. 
+
+Inverse relatie $R^{-1}$: koppels $(y,x)$ met $(x,y) \in R$. 
+
+Samenstelling van relaties R en S, notatie $S \circ R$. Engels: composition. Relaties \emph{op een verzameling} is de formulering als $X=Y$. Graaf, gerichte graaf: met pijlen de relatie tekenen. 
+
+Equivalentierelaties. (andere: orde-relaties, zie later; nog andere: functies, zie volgende week). Het zijn relaties op X, die reflexief, symmetrisch en transitief zijn. 
 
 \section{KEEP ME TO JUMP TO END}
 
