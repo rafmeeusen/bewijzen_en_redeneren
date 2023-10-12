@@ -1,0 +1,86 @@
+\documentclass[hidequestions]{homework}
+
+\usepackage{amsthm}
+\renewcommand*{\proofname}{Bewijs}
+
+
+\homeworksetup{
+    username={Karolien Postelmans, Lorenz Micoli, Raf Meeusen},
+    course={Bewijzen en redeneren},
+    setnumber=3}
+\begin{document}
+
+
+
+\section*{Opdracht 1a}
+
+Gegeven: 
+\[A,B,C \subset X\] 
+
+Bewijs dat: 
+\[A \setminus C \subset (A \setminus B) \cup (B \setminus C)
+\] 
+
+\begin{proof}
+
+We weten dat $A \setminus C = A \cap C^c$. Zo is ook $A \setminus B = A \cap B^c$ en $B \setminus C = B \cap C^c$. We kunnen dus het "te bewijzen" herschrijven als: 
+\[  A \cap C^c \subset (A \cap B^c) \cup (B \cap C^c)\] 
+
+Herwerken we nu het rechterlid van de gelijkheid met de distributieve eigenschappen van unie en doorsnede: 
+
+$(A \cap B^c) \cup (B \cap C^c)$\\
+= $[(A \cap B^c) \cup (B )]  \cap   [(A \cap B^c) \cup (C^c)]$ \\
+= $[(A \cup B) \cap (B^c \cup B )]   \cap   [  (A  \cup C^c) \cap (B^c \cup C^c)   ]$ \\
+= $ (A \cup B) \cap (B^c \cup B ) \cap  (A \cup C^c) \cap (B^c \cup C^c) $ \\
+= $ (A \cup B) \cap  (A \cup C^c) \cap (B^c \cup C^c) $ \\
+In de laatste stap, mogen we $(B^c \cup B )$ weglaten omdat dit het universum is, en de doorsnede met het universum geen effect heeft. 
+
+Nu tonen we aan dat  elke $x \in A \cap C^c$ ook in de verzameling $ (A \cup B) \cap  (A \cup C^c) \cap (B^c \cup C^c) $ zit. Dit is zo, indien elke 
+$x \in A \cap C^c$ in $ (A \cup B)$ zit, en in $ (A \cup C^c) $ zit, en in $ (B^c \cup C^c) $ zit. 
+
+Als $x \in A \cap C^c$, dan geldt $x \in A$, en dan geldt ook dat $x \in (A \cup B)$ , alsook dat $x \in (A \cup C^c)$.
+Eveneens geldt dat $x \in C^c$, en dan ook dat $x \in (B^c \cup C^c) $. 
+
+\end{proof}
+
+
+\section*{Opdracht 1b}
+
+Beschouw bijvoorbeeld de verzameling $B \setminus (A \cup C)$. Deze is wel deel van het rechterlid van de vergelijking, maar niet van het linkerlid van de vergelijking, dus de gelijkheid is fout. 
+
+\section*{Opdracht 2}
+
+Gegeven: 
+\[ I = \{x \in \mathbb{R} \mid  0<x<1\}\]
+\[ A_x = \{ y \in \mathbb{R} \mid  -\frac{1}{x} \leq y < x \} \]
+
+Gevraagd: de algemene unie en algemene doorsnede voor de $A_x$ over alle $x$ uit $I$. 
+
+\begin{proof}
+
+We kijken eerst na of het interval in de definitie van $A_x$ is steeds geldig is, met andere woorden: 
+we controleren dat altijd geldt dat $-\frac{1}{x} < x$. Dit is zo, want $x>0$, dus links staat een negatief getal, en rechts een positief getal. 
+
+Om in het bewijs verwarring te voorkomen tussen $x$ als veranderlijke in de definitie van $A_x$ en $x$ als rechtergrens van interval $A_x$, 
+introduceren we de symbolen $L_A(x)$ en $R_A(x)$  voor respectievelijk de linker- en rechtergrens van het interval $A_x$. Dus $L_A(x) = -\frac{1}{x}$ en $R_A(x)=x$. We kunnen ook alvast noteren dat $L_A(x)$ groter wordt als $x$ groter wordt, en dat eveneens $R_A(x)$ groter wordt als $x$ groter wordt. 
+
+Voor de algemene unie zoeken we de uiterste grenzen over alle $A_x$, namelijk 
+de meest linkse $L_A(x)$ op de re\"ele as, en de meest rechtse $R_A(x)$ op de re\"ele as. 
+De kleinste $L_A(x)$ krijgen we voor de kleine $x$-waarden, dus $x\rightarrow 0$ (x benadert 0 met $x>0$), en $L_A(x)$  gaat dan richting $-\infty$.  
+De grootste $R_A(x)$ krijgen we voor de grootste $x$, dus $x\rightarrow 1$ (x benadert 1 met $x<1$), en dan gaat $R_A(x)=x$ uiteraard ook richting $1$ zonder ooit $1$ te worden. 
+
+De oplossing van de algemene unie: 
+\[ \bigcup_{x \in I} A_x  = ]-\infty,1[    \]
+
+Voor de algemene doorsnede redeneren we als volgt: we zoeken het grootste deelinterval dat gemeenschappelijk is bij alle $A_i$. 
+We kijken hiervoor naar de grootste (meest rechtse) linkergrens $L_A(x)$, en de kleinste (meest linkse) rechtergrens $R_A(x)$. 
+De grootste $L_A(x)$ krijgen we voor de grootste $x$, dus $x\rightarrow 1$, en $L_A(x)$ benadert dan $-1$, maar er geldt steeds dat de grens $L_A(x)<-1$. De kleinste $R_A(x)$ krijgen we voor $x\rightarrow 0$ (x benadert 0 met $x>0$), en voor de rechtergrens geldt dan ook $R_A(x)\rightarrow 0$ met $R_A(x)>0$. 
+
+Aangezien de linkergrens altijd kleiner blijft dan $-1$, ligt $-1$ zelf altijd in het interval $A_x$. Zo ook voor de rechtergrens: die ligt steeds rechts van $0$ op de re\"ele as, dus $0$ ligt steeds in het interval $A_x$. 
+
+De oplossing van de algemene doorsnede: 
+\[ \bigcap_{x \in I} A_x = [-1, 0] \]
+
+\end{proof}
+
+\end{document}
