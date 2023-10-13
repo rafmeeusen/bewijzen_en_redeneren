@@ -7,7 +7,7 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 
-\title{Nota's bewijzen en redeneren}
+\title{Nota's hoorcolleges bewijzen en redeneren}
 \author{Raf Meeusen}
 \date{2023-2024}
 
@@ -86,34 +86,6 @@ Inductie stappen: basisstap, inductiestap (met inductiehypothese: "stelling is g
 Stelling: formule voor n-de getal uit rij van Fibonacci: $a_n = 1/\sqrt{5} * (...) $, voor alle natuurlijke getallen n. 
 Bewijs in cursus met volledige inductie. 
 
-
-
-\section{Oefenzitting 1, 4 okt}
-
-Assistent Thomas. 
-
-Oefening 1.1.2 gemaakt. Mijn oplossing: (v) voor eerste vraag (negatie), en (vii) voor tweede vraag (equivalent). Ik denk dat dit juist was. 
-
-Onthouden: negatie van een "voor alle" is een "er bestaat". 
-
-Oefening 1.4.2 gemaakt. Relatief makkelijk. 
-
-Dan: nagedacht over onderscheid tussen ongerijmde en contrapositie. Niet altijd duidelijk. Principe van ongerijmde: stel dat het T.B. niet waar is, dan tonen we aan dat er een contradictie volgt. Bij contrapositie kan je gewoon vertrekken uit wat algemeenheden, dan bewijzen dat $\neg Q \implies \neg P$, en dan gewoon daaruit via de logica eigenschappen besluiten dat $P \implies Q$. 
-
-Oefening 1.3.4 beginnen bekijken. Die 1.4 van ordening staat op p.8 van de cursus (strikte ongelijkheid wordt bewaard bij links en rechts met $c>0$ vermenigvuldigen. 
-
-Oefening 1.5.1. Voor n=0 waar, dat heb ik nagegaan. Maar dan: inductiestap kon ik niet bewijzen, niet gevonden. 
-
-Oefening 1.5.4a: niet helemaal uitgewerkt maar lijkt me perfect haalbaar. 
-
-Oefening 1.5.4b: door Thomas op bord gezet. Hij gebruikt begrip inductiehypothese, en noemt dit IH en refereert hiernaar expliciet bij de inductiestap. 
-
-Oefening 1.3.7: waarheidstabel eens opgesteld, zodat ik kolom had met 0 en 1 voor $P, Q, R$, $P \implies Q$, $Q \implies R$, $P \implies Q \land Q \implies R$, en tenslotte $P \implies R$. Dan nagekeken dat er onder  $P \implies R$ nergens een 0 staat waar $P \implies Q \land Q \implies R$ 1 is. 
-
-Oefening 1.5.9. Thomas op bord iets gezet. c) zou aan te tonen zijn, maar b) niet. Iets met voldoende aannames. Zie foto. 
-Zelf wat aan a) gewerkt: $a_2 = \frac{3}{2}$. $a_3 = \frac{7}{4}$... Maar niet verder aan gewerkt. 
-
-
 \section{Les 2, 4 okt}
 
 Hoofdstuk 2. Verzamelingen en kwantoren. Betekenis element ($x \in X$). Bekende verzamelingen $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{N}_0, ... $
@@ -138,91 +110,6 @@ Combinaties kwantoren. Volgorde is van belang.
 
 Negatie ($\lnot$) van de $\forall$ wordt een $\exists$. Negatie van de $\exists$ wordt een $\forall$. 
 
-\section{Oefenzitting 2, 11 okt}
-
-
-\subsection{Voorbereidingsoefeningen voor thuis} 
-
-Oefening 2.1.2. Bewijs onderdeel (c) van Stelling 2.1.10 met behulp van Venndiagrammen.
-(niet afgemaakt, maar zou wel lukken) 
-Deel a) $A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $
-Venn-diagram: met 8 gebieden (1 buiten alle verzamelingen, 1 doorsnede van de drie, 3 zonder doorsnede, 3 doorsnedes twee-aan-twee). 
-Dan nagaan dat voor elk gebied geldt dat wat links zit, ook rechts zit, en wat rechts zit, ook links zit. 
-
-Deel b) $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
-Gelijkaardig. 
-
-Oefening 2.1.3. Bewijs onderdeel (d) van Stelling 2.1.10 met behulp van waarheidstabellen.
-(de wetten van De Morgan)
-Deel a) $(A \cup B)^c = A^c \cap B^c$ 
-
-Deel b) $(A \cap B)^c = A^c \cup B^c$ 
-
-Bewijs met waarheidstabellen: niet gemaakt, maar zou wel lukken denk ik. 
-
-
-
-Oefening 2.2.1. Onderzoek of de volgende beweringen waar of niet waar zijn en geef een
-bewijs.
-\begin{itemize}
-\item a) niet waar, bvb. $m=2$ en $n=1$
-\item b) waar ; bewijs is ook voorbeeld nemen
-\item c) waar ; bewijs: kies n=m 
-\item d) niet waar; bewijs: ik vind altijd een n waarvoor het niet klopt
-\item e) waar
-\item f) niet waar
-
-\end{itemize}
-
-
-
-Oefening 2.2.7. Een deelverzameling $A \subset R$ is naar boven begrensd als ... Geef een negatie van deze bewering. 
-
-OK, eens gemaakt. Moet je echt stap voor stap doen, negatie eerst binnen brengen in eerste kwantor, dan in tweede kwantor. Pas in tweede stap wordt propositie omgekeerd naar $a>x$. 
-
-\subsection{Oefenzitting}
-
-Oefening 2.1.1. Bewijs de eerste uitspraak van onderdeel (c) van Stelling 2.1.10 met een logische redenering.
-Deel a) $A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $. Oefening gemaakt voor ene inclusie: voor een $x$ in linkse verzameling geldt dat die ook in de rechtse zit (x zit in A of in B doorsnede C, gevalsonderscheiding, geval x in A, dan ook in A unie B, en ook in A unie C, dus ook in de doorsnede). Etc. etc. 
-Ene richting bewijs is de truuk om uit te breiden met unie, wat altijd mag (als x in A zit, dan ook in A unie whatever). Dan ook omgekeerd. Is wat moeilijker, vind ik. 
-
-2.1.4 (b) bewijs equivalentie 
-$ A \subset B \Leftrightarrow A \cap B = A$
-Bewijs in twee grote stappen, de twee implicaties. Implicatie van links naar rechts: stel dat A deelverzameling van B, dan zou volgen dat $A \cap B = A$. Deze gelijkheid van verzamelingen tonen we aan met twee inclusies: $A \cap B \subset A$ en $A \subset A \cap B $. 
-Eerste inclusie is altijd geldig, tweede inclusie geldt omdat we weten dat $ A \subset B$. Te redeneren met willekeurige x in $A$ etc. etc. 
-
-Oefening 2.1.5 i.v.m. symmetrisch verschil. a) bewijs dat gelijk is aan unie van verschilverzamelingen. Zal wel gelijkaardig zijn als andere bewijzen met verzamelingen. Niet helemaal uitgewerkt maar wel over nagedacht. b) wanneer is deze leeg? Antwoord: als $A=B$. Om te bewijzen: als $A=B$ dan $A \Delta B = \emptyset$. Niet zo evident. Wanneer is een $A \setminus B $ leeg? Alleen als $A \subset B$. 
-c) Dit is het geval als B leeg is. 
-Oplossing op bord in oefenzitting voor a) maakt gebruik van eigenschap $X \setminus Y = X \cap Y^c$. Dus lijkt me een tip: veel eigenschappen van verzamelingen proberen te gebruiken bij zo'n bewijs. Deel a) kan dus bewezen worden door helemaal uit te schrijven en te herschrijven vanuit definitie. 
-
-
-Oefening 2.1.9a: gemaakt. Eerst alle drie verzamelingen koppels uitgeschreven: $A \times (B \cup C) = \{ (a,x) | ...$. Dan door twee inclusies aangetoond dat links en rechts hetzelfde zijn. 
-Oefening 2.1.9b: niet meer gemaakt. 
-Oefening 2.1.9c: niet meer gemaakt. 
-
-Oefening 2.1.10: OK, dat lukte me wel. Gewoon aangetoond dat willekeurig koppel uit linkse verzameling altijd in de rechtse zit. 
-
-Oefening 2.2.2 per ongeluk begonnen:
-\begin{itemize}
-    \item b) niet waar, er is voor elke x maar 1 y die eraan voldoet
-    \item c) waar
-\end{itemize}
-
-Oefening 2.2.6: Antwoord is Ja. op bord gestaan in oefenzitting. Eigenlijk gewoon in tekst geschreven hoe je dit redeneert/inziet. Nogal triviaal, via aan $a_0$ die bestaat, en die je dan gebruikt om het aan te tonen. 
-
-
-Oefening 2.2.9
-
-Oefening 2.2.10
-
-Oefening 2.2.12
-
-
-\section{huistaak week 2 vraag 2}
-
-Nog aan gewerkt na deadline. 
-Gelukt. 
-Kwam erop neer $a_{n+2}=p^{[1+2\binom{n+1}{2}-\binom{n}{2}]}$ uit te rekenen en te zien dat het gelijk is aan $p^{\binom{n+2}{2}}$. Gedaan gebruikmakend van $\binom{n}{2} = \frac{n(n-1)}{2}$. 
 
 \section{Les 3, 11 okt}
 
@@ -238,10 +125,12 @@ Definitie partitie $\mathbf{P}$ van X. Partitie is deelverzameling van de machts
 
 Stelling die partities en equivalentierelaties aan mekaar koppelt (1-op-1 relatie ertussen). Equivalentieklassen gedefinieerd tussendoor in de les. Notatie $[x]_R$. Notatie met tilde $\sim$ voor equivalentierelaties en ook bij equivalentieklasse gebaseerd op relatie.  Dan soort bewijs gezien, dat elke equivalentierelatie een partitie definieert, door elke van de 3 eigenschappen na te gaan. 
 
-Het woord "lemma" gebruikt: voor hulpresultaat, een minder belangrijke stelling. 
+Het woord "lemma" gebruikt: voor hulp-resultaat, een minder belangrijke stelling. 
 
 Even terug naar eigenschappen van relaties: reflexief, symmetrisch, transitief: opdracht, probeer eens alle combinaties te vinden: reflexief, niet symmetrisch, niet transitief, etc. 
 
+
+\section{Les 4, 18 okt}
 
 
 \section{KEEP ME TO JUMP TO END}
