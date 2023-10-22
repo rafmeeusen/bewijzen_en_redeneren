@@ -1,0 +1,91 @@
+
+% Preamble
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[dutch]{babel}
+
+\setlength{\parindent}{0cm}
+
+\DeclareMathOperator{\sgn}{sgn}
+
+\title{Mijn eerste \LaTeX\ document}
+\author{Arno Kuijlaars}
+\date{11 oktober 2023}
+
+% Body
+\begin{document}
+\maketitle
+
+\section{Inleiding}
+\subsection{Formules}
+
+Formule van Pythagoras:  $a^2 + b^2 = c^2$
+
+Complexe $e$-macht: $e^{x+iy} =  e^x (\cos(y) + i \sin(y))$
+
+Meetkundige Reeks:
+\[ \sum_{k=0}^{\infty} x^k =  \frac{1}{1-x} \]
+ als $|x| < 1$.
+
+ Een bijzondere integraal:
+  \[ \int_0^{\infty} e^{-x^2} dx = \sqrt{\pi} \]
+  
+
+Determinant van een $2 \times 2$ matrix:
+\[ \det \begin{bmatrix} a & b \\ c & d \end{bmatrix} =  ad - bc \]
+
+\subsection{Formules met een nummer}
+Formule met een nummer
+\begin{equation} \label{formule1}
+	   A \subset B,  \qquad A \cap B = \emptyset
+\end{equation}
+
+De eerste formule in (\ref{formule1}) 
+betekent dat $A$ een deelverzameling  is van $B$.
+
+Alternatief is \eqref{formule1}. Dit werkt alleen als je
+het pakket \verb|amsmath| hebt ingelezen in de preamble.
+
+Determinantformule
+\[ \det A = \sum_{\sigma \in S_n} \sgn(\sigma) 
+	\prod_{j=1}^n a_{j, \sigma(j)} \]
+
+Matrix
+\[ A =
+  \begin{pmatrix}
+	1 & 2 & 5 \\ 3 & 4 & 0 \\ 5 & 6 & -1
+	\end{pmatrix}
+	\]
+Let op dat je hiervoor ook \verb|amsmath| nodig hebt.
+
+\section{Lijsten}
+
+Lijst met enumerate omgeving
+\begin{enumerate}
+\item[(a)] $f$ is een injectie als ...
+\item[(b)] $f$ is een surjectie als ...
+\end{enumerate}
+
+Lijst met itemize omgeving
+\begin{itemize}
+\item $A \subset B$
+\item $x \in A$
+\end{itemize}
+
+\begin{description}
+	\item[Eerste item]  A
+	\item[Tweede item] B
+\end{description}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

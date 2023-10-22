@@ -1,0 +1,56 @@
+% Preamble
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[dutch]{babel}
+\title{Mijn tweede \LaTeX\ document}
+\author{Arno Kuijlaars}
+\date{11 oktober 2023}
+
+\newtheorem{stelling}{Stelling}
+\newtheorem{lemma}[stelling]{Lemma}
+% Body
+\begin{document}
+\maketitle
+\section{Omgevingen}
+
+\begin{stelling}  \label{huistaak1b}
+Zij $(a_k)$ een rij van strikt positieve getallen waarvoor geldt dat 	voor elke $n \in \mathbb N_0$
+	\[ \sum_{k=1}^n a_k^3  = \left(\sum_{k=1}^n a_k \right)^2. \]
+	Dan geldt dat $a_k = k$ voor alle $k \in \mathbb N_0$.
+\end{stelling}
+
+\begin{proof}
+Stelling \ref{huistaak1b} was deel van de eerste huistaak.
+We hebben het bewezen met volledige inductie.
+\end{proof}
+
+\begin{lemma}[Hoofdstelling van de integraalrekening]
+Als $F$ afleidbaar is en $f = F'$ continu is dan geldt
+\[ \int_a^b f(x) dx = F(b) - F(a). \]
+\end{lemma}
+\begin{proof} 
+Zie het boek van Adams en Essex \cite{Adams-Essex}.
+\end{proof}
+
+Het boek \cite{Adams-Essex} gebruiken we bij de cursus Calculus I.
+Bij Lineaire Algebra gebruiken we het mooie boek \cite{Igodt-Veys}.
+
+\section{Bibliografie}
+
+\begin{thebibliography}{9}
+\bibitem{Adams-Essex}
+Robert A. Adams en Christopher Essex, 
+Calculus, A Complete Course, 9th edition. 
+Pearson Education Canada, Toronto, 2016. 
+
+\bibitem{Igodt-Veys}
+Paul Igodt en Wim Veys,
+Lineaire algebra, Universitaire Pers Leuven, 2011.
+\end{thebibliography}
+
+\end{document}
+
+
+
+
+

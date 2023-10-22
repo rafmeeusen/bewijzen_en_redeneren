@@ -1,0 +1,64 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\renewcommand*{\proofname}{Bewijs}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bf Bewijzen en redeneren: Huistaak week 4} \par\vspace{.5em}
+{(te laat gemaakt, niet ingediend; ik was ziek die week)}
+\end{center}
+
+
+\section*{Opdracht 1}
+
+
+Opgave. Zij $R$ de relatie op $\mathbb{C}$  die gegeven wordt door $(z_1, z_2) \in R$ als en slechts als er een $w \in \mathbb{C}$ met $w^3 \in \mathbb{R}_0^+ = ] 0, \infty [ $  bestaat met de eigenschap dat 
+\[ z_1 = w z_2 \] 
+
+\begin{enumerate}
+\item[(a)] Bewijs dat $R$ een equivalentierelatie is.
+\item[(b)] Wat is de equivalentieklasse $[i]_R$ van het getal $i \in \mathbb{C}$? Schets de equivalentieklasse als een deelverzameling van het complexe vlak.
+\end{enumerate}
+
+
+Antwoord: 
+Laat ons eerst eens kijken naar de complexe getallen $w$. Schrijven we $w$ in poolco\"ordinaten $w = ||w|| e^{i\theta_w}$, dan is $w^3 = ||w||^3 e^{i3\theta_w}$, en kunnen we zeggen dat $w^3 \in \mathbb{R}_0^+$ als en slechts als 
+\[
+( ||w||^3 \neq 0 ) \land  (3\theta_w = k\pi) , k\in \mathbb{Z} 
+\]
+als en slechts als 
+\[
+( ||w|| \neq 0 ) \land  (\theta_w = k\frac{\pi}{3}) , k\in \mathbb{Z} 
+\]
+
+De complexe getallen $w$ zijn dus verschillend van $0+i0$, en maken in het complexe vlak een hoek van $0, \pm 60, \pm 120$ of $180 $ graden. De verzameling van alle mogelijke $w$ zijn dus $3$ rechten in het complexe vlak uitgezonderd het punt $0$. 
+Kijken we nu ook naar hoe we $z_1 = w z_2$ kunnen interpreteren in termen van poolco\"ordinaten. Stel $z_1 = ||z_1|| e^{i\theta_1}$, $z_2 = ||z_2|| e^{i\theta_2}$ en $w = ||w|| e^{i\theta_w}$. Dan is  $(z_1, z_2) \in R$ als en slechts als er een $w$ bestaat zodat
+\[
+||z_1|| e^{i\theta_1} = ||w|| e^{i\theta_w} ||z_2|| e^{i\theta_2} 
+\]
+als en slechts als 
+\[
+( ||z_1||  = ||w|| \cdot ||z_2|| ) \land ( \theta_1 = \theta_w + \theta_2 ) 
+\]
+Kijken we ook eens voor een willekeurige $z_1$ of en welke $z_2$ ermee in relatie staan. Wat de norm ("lengte") van $z_2$ betreft: als $z_1 = 0$, dan is er maar \'e\'en $z_2$ die voldoet, namelijk $z_2=z_1=0$. Dus $(0,0)$ is het enige element van $R$ met $z_1 = 0$. 
+Als daarentegen $z_1 \neq 0$, dan kan voor elke $z_2 \neq 0$ een $w$ gevonden worden zodat aan de norm-voorwaarde voldaan is. Wat het argument ("hoek") betreft: $\theta_2 = \theta_1 - \theta_w = \theta_1 - k\frac{\pi}{3}$, dus \emph{alleen die getallen $z_2$ zitten in de relatie waarvoor geldt dat hun "hoek" }
+\[ k\frac{\pi}{3} = k60^{\circ} \] 
+\emph{minder is dan $z_1$.}
+
+ Dus bijvoorbeeld voor alle $z_1$ verschillend van $0$ met "hoek" $75^{\circ}$, zitten alle $z_2$ ermee in relatie waarvoor de "hoek" $15^{\circ}$, $75^{\circ}$, $135^{\circ}$, $-165 ^{\circ}$, $-105^{\circ}$ of $-45^{\circ}$ is. 
+
+Terug naar de opgave. 
+Om te bewijzen dat $R$ een equivalentierelatie is, moeten we bewijzen dat $R$ reflexief, symmetrisch en transitief is. Dat is het geval. Reflexief volgt uit $w=1$ is een geldige $w$. Symmetrisch volgt uit $\frac{1}{w}$ is altijd een geldige $w$ (noot: $\frac{1}{w}$ heeft argument $-k\frac{\pi}{3})$. Transitief volgt ook uit rekenen met complexe getallen: er kan altijd een $w_3$ gevonden worden, gegeven een $w_1$ en $w_2$, zodanig dat $w_3 = w_1 \cdot w_2$. 
+
+De equivalentieklasse van het getal $i \in \mathbb{C}$: gelijkaardig als hierboven, zijn dit alle complexe getallen verschillend van $0$ met hoeken die van de vorm $90^{\circ} + k60^{\circ} = 30^{\circ} + k60^{\circ} = (30^{\circ}, 90^{\circ}, 150^{\circ}, -150^{\circ}, -90^{\circ}, -30^{\circ}$) zijn. 
+
+\end{document}
+
+
+
