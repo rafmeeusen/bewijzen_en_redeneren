@@ -1,0 +1,58 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\renewcommand*{\proofname}{Bewijs}
+\newtheorem{stelling}{Stelling}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bf Bewijzen en redeneren: Huistaak week 5} \par\vspace{.5em}
+{Karolien Postelmans, Caroline Lemmens, Raf Meeusen*}
+\end{center}
+
+
+(*) heeft neergeschreven
+
+\section*{Opdracht 1a}
+
+We zoeken een tegenvoorbeeld voor: 
+\[  f^{-1}(B) \subset f^{-1}(C)  \implies  B  \subset C  \]
+waarin $f: X \rightarrow Y$ een functie, en $B,C \subset Y$. 
+
+Beschouw volgende verzamelingen: 
+$X = \{a,b\}$ en $Y=\{1,2,3\}$, en volgende functie $f$: $f = \{ (a,2), (b,3) \}$. 
+Kiezen we  volgende deelverzamelingen van $Y$: $B=\{1,2\}$ en $C=\{2,3\}$, dan geldt: $f^{-1}(B) = \{ a \} $ en $f^{-1}(C) = \{ a, b\} $. Hierbij is duidelijk dat $f^{-1}(B) \subset f^{-1}(C)$, en toch is $B \subset C$ hier niet waar. Dus de gegeven implicatie is inderdaad niet algemeen geldig voor alle functies. 
+
+\section*{Opdracht 1b}
+
+\begin{stelling}  
+Gegeven functie $f: X \rightarrow Y$ en $B,C$ willekeurige deelverzamelingen van $Y$, dan
+($f^{-1}(B) \subset f^{-1}(C)  \implies  B  \subset C$) 
+als en slechts als $f$ surjectief is. 
+
+\end{stelling}
+
+
+
+\begin{proof} 
+Er zijn twee implicaties te bewijzen:  
+\begin{itemize}
+\item (1)($\Rightarrow$): Als $[f^{-1}(B) \subset f^{-1}(C)  \implies  B  \subset C ]$ dan is $f$ surjectief. 
+\item (2)($\Leftarrow$): Als $f$ surjectief is, dan $[f^{-1}(B) \subset f^{-1}(C)  \implies  B  \subset C ]$. 
+\end{itemize}
+Bewijs van implicatie 1: 
+Kiezen we $y$ willekeurig in $Y$, en kiezen we $B = \{ y \}$,  en $C = \emptyset$. Dan is $B \not\subset C$, en via de contrapositie van gegeven implicatie weten we dat dan $f^{-1}(B) \not\subset f^{-1}(C)$, of anders geschreven: $f^{-1}(\{y\}) \not\subset \emptyset$. Het invers beeld van een willekeurig element $y$ is niet leeg, en dus is $f$ surjectief. Er bestaat immers voor elke $y \in Y$ een $x \in X$ zodat $f(x)=y$. 
+
+Bewijs van implicatie 2: 
+Neem willekeurige $b \in B$. $f$ is surjectief, dus er bestaat een $a \in X$
+zodat $f(a)=b$. Deze $a$ zit per definitie in $f^{-1}(B)$. Maar omdat  $f^{-1}(B) \subset f^{-1}(C)$, geldt eveneens: $a \in f^{-1}(C)$. Hieruit volgt dat $f(a)=b \in C$. Aangezien voor een willekeurge $b \in B$ geldt: $b \in C$, is bewezen dat $B \subset C$. 
+\end{proof}
+
+\end{document}
