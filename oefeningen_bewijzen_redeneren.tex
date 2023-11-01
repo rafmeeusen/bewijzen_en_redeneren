@@ -189,13 +189,68 @@ Oefening 3.2.10 (p.50):
 
 \subsection*{Voorbereiding}
 
-4.1.3, 4.1.9, 4.1.11 (a,b,c), 4.2.2, 4.2.6, 4.2.9 
+Oef. 4.1.3 (p.57): $f(\pi)=3$, en $f(-\pi)=-4$. Functieomschrijving: rond naar beneden af op geheel getal. In principe om aan te tonen dat $f$ een functie is: enerzijds existentie aantonen van een $n$ voor elke $x$, anderzijds uniciteit van dit beeld aantonen voor elke $x$. Heb ik niet gedaan, dus oefening niet helemaal gemaakt eigenlijk. 
 
+
+Oef. 4.1.9 p. 58: bij a) zijn er 3 koppels in de elke functie, elk koppel heeft willekeurige $y \in \{ a,b \}$, dus twee mogelijke $y$-waarden. Dus: 2x2x2 = 8 functies. Bij b) zijn er 2 koppels, telkens 3 $y$-waarden mogelijk, dus $3^2=9$ functies. 
+
+Oef. 4.1.11 (a,b,c) op p. 58: 
+a) is juist; heb ik beredeneerd door naar definities te kijken, en ik kwam eigenlijk uit dat de verzamelingen gelijk zijn, dus dat b) en c) ook waar zijn. MAAR: heel goed mogelijk dat ik fout heb gemaakt! 
+Moet dus eigenlijk formeler. En ik heb dus niet meer gekeken naar b) en c). In oefenzitting gevraagd: het klopt, alle drie a, b, c zijn waar hier. 
+
+
+Oef. 4.2.2 (p. 63): 
+Even recap: injectie is "geen dubbels, geen twee duiven in 1 kotje". En surjectie is "geen lege y-waarden". 
+
+\begin{tabular}{c|c|c|c}
+      &  inj. & surj. & bij. \\
+$f_1$ &       &       &    \\
+$f_2$ &   X   &       &    \\
+$f_3$ &       &   X   &    \\
+$f_4$ &   X   &   X   & X 
+\end{tabular}
+
+Oef. 4.2.6 (p.64): a) 6, b) 0, c) 0. 
+
+
+Oef. 4.2.9 (p.64): begonnen, maar ik vond geen voorschrift voor $f^{-1}$, dus aan Thomas gaan vragen. Dan ingezien dat ik wat harder had moeten proberen. 
+Als $y = \frac{3x}{x-2}$, dan is $yx-2y=3x$, en $x= \frac{-2y}{3-y}$, dus dit is voorschrift van $f^{-1}$. Thomas deed het ietsje anders qua notatie: vertrekpunt $f(f^{-1}(y)) = y$, dus als je $f^{-1}$ in vult in $f(x)$ en gelijkstelt aan $y$, en dan oplost naar $f^{-1}$, dan kom je het ook uiteraard. 
+$Y = \mathbb{R} \setminus \{ 3 \}$
 
 
 \subsection*{oefenzitting} 
 
-4.1.4, 4.1.7 (c,d), 4.1.11 (d,e,f), 4.1.12 (a,b,c), 4.2.4, 4.2.7, 4.2.10, 4.2.13 
+Oef. 4.1.4 (p.57):  
+voorbeeld dat op bord heeft gestaan. Neem $X=\{x_1\}, Y=\{y_1, y_2\}, Z= \{z_1  \} $, en $R=\{(x_1, y_1), (x_1, y_2) \}$, en $S =\{(y_2, z_1) \}  $. Dan is $S$ geen functie, want $x_1$ heeft twee "beelden". En $S$ is geen functie, want $y_1$ heeft geen beeld. Toch is $S \circ R$ een functie. 
+
+
+Oef. 4.1.7 (c,d), p.57-58: welke inclusies zijn geldig voor alle $f, A, B$?  c) is waar denk ik; getekend in Venn diagram en beredeneerd. d) is niet waar denk ik; Nog niet echt grondig bewezen voor de rest. 
+
+
+
+Oef. 4.1.11 (d,e,f), p. 58 : (zie a,b,c voorbereiding). Voor e) kan tegenvoorbeeld gevonden worden. $A_1=\{ 1 \}, A_2=\{ 2 \} $, en $f = \{ (1,1), (2,1) \}  $. 
+Voor d) kan bewijs gevonden worden. Denk ik. Was verwarrend, want assistent heeft a/b/c van oefening omgewisseld met d/e/f. Ene is met unie, andere met doorsnede. 
+
+
+Oef. 4.1.12 (a,b,c) p. 58: geskipt. 
+
+Oef. 4.2.4 (p.63):  
+Gegeven $f$ en $g$ functies, resp. $X \rightarrow Y$ en $Y \rightarrow Z$. 
+a) Als f en g injectief, dan $g \circ f$ injectief. 
+Injectief = geen dubbels aan $Y$-kant. M.a.w. als twee $x$ waarden verschillend, dan ook $y$ waarden verschillend. Of contrapositie van de gewone definitie: als twee $y$ waarden gelijk, dan ook $x$ waarden gelijk. 
+Bewijs: beschouwen we $g(f(x_1))  = g(f(x_2)$ voor willekeurige $x_1, x_2 \in X$. T.B. $x_1=x_2$. 
+Voor de buitenste functie $g$, die injectief is, kunnen we direct afleiden dat hun argumenten gelijk moeten zijn, dus $f(x_1)  = f(x_2$. Maar ook $f$ is injectief, dus volgt direct $x_1=x_2$. QED.
+
+b) $f$ en $g$ surjectief. Recap: geen lege $y$-waarden. We willen dus bewijzen: $\forall z: \exists x: g(f(x)) = z$. Nemen we willekeurige $z$. Omdat $g$ surjectief is: er bestaat een $y \in Y$ zodat $g(y)=z$. Maar tevens geldt voor alle $y$ dat er een $x$ bestaat zodat $y=f(x)$, en na invullen: $g(f(x))=z$. Dus een $x$ bestaat steeds voor willekeurige $z$. QED. 
+
+
+
+Oef. 4.2.7: 
+
+Oef. 4.2.10: 
+
+Oef. 4.2.13: 
+
 
 \subsection{Extra oefeningen}
 
@@ -203,6 +258,16 @@ Oefening 3.2.10 (p.50):
 
 3.1.2 (b,d), 3.1.3 (a), 3.1.8, 3.2.1, 3.2.3 (a), 3.2.9
 
+
+\section{Oefenzitting 5}
+
+\subsection{Opgaven}
+
+Voorbereidingsoefeningen voor thuis: 5.1.1 (a), 5.1.2, 5.1.8, 5.3.4, 5.4.1 
+
+Oefeningen voor de oefenzitting:5.1.3, 5.1.4, 5.3.2, 5.4.2, 5.4.3 , Als er tijd over is  5.4.4, 5.53 
+
+Extra oefenmateriaal: 5.5.1, 5.5.2, 5.5.4, 5.5.6
 
 
 
