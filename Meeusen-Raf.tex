@@ -1,0 +1,142 @@
+\documentclass[hidelinks,11pt,a4paper]{article}
+\usepackage[dutch]{babel}
+\usepackage{amssymb}
+\usepackage{hyperref} 
+\usepackage{amsmath}
+
+
+\title{LaTeX opdracht Bewijzen en Redeneren 2023}
+\author{Raf Meeusen, s0050110}
+\date{11 november 2023}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Paul Cohen}
+% Opdracht 1 Geef een korte beschrijving van het leven en werk van Cohen. 
+% Informatie hierover is te vinden in boeken, artikels en op het internet.
+% Gebruik minstens twee onafhankelijke bronnen en geef referenties naar de bronnen die je gebruikt. 
+% Zorg ervoor dat uw beschrijving niet meer dan 30 regels bedraagt.
+We geven hier een korte beschrijving van het leven en werk van Paul Cohen, een 20e-eeuwse wiskundige. 
+Paul Cohen is geboren in 1934 in de Amerikaanse staat New Jersey.  
+Hij doctoreerde aan de Universiteit van Chicago in 1958. 
+In december 1963, op 29-jarige leeftijd, publiceerde hij \emph{The independence of the continuum hypothesis}, 
+het eerste bewijs dat de continu\"um\-hypothese niet bewijsbaar is binnen de klassieke verzamelingenleer. 
+De continu\"um\-hypothese heeft een mooie geschiedenis: in 1878 publiceerde Georg Cantor \emph{'Ein Beitrag zur Mannigfaltigkeitslehre'}, waarin hij de continu\"um\-hypothese formuleerde. In 1900 zette David Hilbert dit probleem (een nog onbewezen hypothese) op zijn beroemde lijst van 23 onopgeloste wiskundige problemen. Vervolgens bewees Kurt G\"odel in 1940 - Cohen werd 6 in dat jaar - dat er geen bewijs mogelijk is dat aantoont dat de continu\"um\-hypothese niet waar is. Met andere woorden: G\"odel toonde aan dat de negatie van de continu\"um\-hypothese niet kan bewezen worden. En vervolgens toonde Cohen in 1963 aan dat de continu\"um\-hypothese zelf ook niet kan bewezen worden. 
+Cohen werd door G\"odel gecomplimenteerd voor zijn werk, en in 1966 won Cohen voor zijn werk over de continu\"um\-hypothese de Fieldsmedaille, een zeer belangrijke onderscheiding voor wiskundigen jonger dan 40 jaar. 
+We komen nog terug op de continu\"um\-hypothese  in hoofdstuk \ref{sec_conthyp} van deze opdracht. 
+Volgens Peter Sarnak heeft Cohen ook gewerkt aan de Riemann hypothese, een ander probleem dat voorkomt op de lijst van 23 problemen van Hilbert. De Riemann hypothese houdt verband met de verdeling van de priemgetallen, en is tot op heden niet bewezen. 
+Paul Cohen overleed in Californi\"e in 2007 op 72-jarige leeftijd. 
+
+Noot: de geraadpleegde bronnen voor dit stukje over Paul Cohen zijn:
+\cite{wiki_en_cohen}, \cite{wiki_nl_cohen}, \cite{sarnak}, \cite{wiki_nl_fields}, \cite{wiki_en_cont}, \cite{wiki_en_hilb23}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Andere formulering continu\"umhypothese}
+\label{sec_conthyp}
+% Opdracht 2 Bewijs dat de continuumhypothese equivalent is met de volgende bewering:
+% Als X een overaftelbare deelverzameling van R is, dan is er een injectieve functie van R naar X.
+
+%TODO: beetje herschrijven, zodat ik genummerde formules heb
+
+De continu\"umhypothese zoals geformuleerd in \cite{bew&red} luidt: 
+Er bestaat geen verzameling $X$ met $\aleph_0 < |X| < 2^{\aleph_0}$. 
+Hierbij is $\aleph_0$ de kardinaliteit van $\mathbb{N}$, en is $2^{\aleph_0}$ de kardinaliteit van $\mathbb{R}$. 
+
+In dit hoofdstuk bewijzen we dat voor deelverzamelingen van $\mathbb{R}$ de volgende bewering equivalent is met de continu\"umhypothese: 
+Als X een overaftelbare deelverzameling van $\mathbb{R}$ is, dan is er een injectieve functie van $\mathbb{R}$ naar $X$.
+
+\emph{Bewijs.} Herformuleren we eerst de continu\"umhypothese als volgt. Voor alle verzamelingen $X \subset \mathbb{R}$ geldt: 
+$|X| \leq |\mathbb{N}| $ of $|X| \geq |\mathbb{R}|$. En we herformuleren de equivalente formulering door equivalentie van ($P \implies Q$) en ($\neg P \lor Q$) als volgt. Voor alle verzamelingen $X \subset \mathbb{R}$ geldt: ofwel is $X$ niet overaftelbaar, ofwel bestaat er een injectieve functie van $\mathbb{R}$ naar $X$. 
+
+Om de equivalentie te bewijzen, bewijzen we twee implicaties.  
+
+Eerste implicatie: $X$ is een willekeurige deelverzameling van  $\mathbb{R}$, en er zijn twee gevallen. 
+Geval 1: $|X| \leq |\mathbb{N}| $. 
+Geval 2: $|X| \geq |\mathbb{R}|$. 
+Voor geval 1, kunnen we rechtstreeks besluiten dat $X$ aftelbaar is, dus niet overaftelbaar, waarmee implicatie 1 geval 1 bewezen is. 
+Voor geval 2 volgt uit de definitie van $\leq$ voor kardinaliteiten dat er een injectieve functie bestaat van $\mathbb{R}$ naar $X$, waarmee implicatie 1 geval 2 ook bewezen is. 
+
+Tweede implicatie: $X$ is een willekeurige deelverzameling van  $\mathbb{R}$, en er zijn ook hier twee gevallen. 
+Geval 1: $X$ niet overaftelbaar. 
+Geval 2: er bestaat een injectieve functie van $\mathbb{R}$ naar $X$. 
+Voor geval 1 is gegeven dat $X$ niet overaftelbaar is, $X$ is bijgevolg aftelbaar, en is $|X|$ ofwel eindig ($|X| < |\mathbb{N}|$ of wel aftelbaar oneindig ($|X| = |\mathbb{N}|$), bijgevolg $|X| \leq |\mathbb{N}| $, waarmee geval 1 bewezen is. 
+Voor geval 2 is gegeven dat er een injectieve functie bestaat van $\mathbb{R}$ naar $X$, waardoor we per definitie kunnen schrijven dat $|X| \geq |\mathbb{R}|$, waarmee ook dit geval bewezen is. 
+\emph{QED} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Overaftelbare verzameling}
+% Opdracht 3 Formuleer de bewering dat P(N) equipotent is met 2^N als een stelling.
+% Bewijs vervolgens deze stelling door een expliciete functie P(N) -> 2^N te definieen en te bewijzen dat dit een bijectie is.
+
+\emph{Stelling}: $ P(\mathbb{N})$ is equipotent met $2^{\mathbb{N}} = \{ f \mid f : \mathbb{N} \rightarrow \{0,1\} \text{ is een functie}  \} $
+
+In dit hoofdstuk bewijzen we deze stelling. 
+
+\emph{Bewijs}: 
+We defini\"eren een functie van een willekeurig element $A \in P(\mathbb{N}) $ naar een welbepaald element in $2^{\mathbb{N}}$ als volgt. We kunnen een willekeurige $A \subset \mathbb{N}$ noteren als een oneindige rij nullen en enen, waarbij een $0$ staat voor \emph{'$A$ bevat overeenkomstige natuurlijk getal niet'}, en een $1$ staat voor \emph{'$A$ bevat het overeenkomstige natuurlijk getal'}. Bijvoorbeeld: als $A = \{0, 3, 5\}$, dan is de rij $(1,0,0,1,0,1,0,0,0...)$. De twee triviale voorbeelden: $\emptyset$ komt overeen met $(0,0,0...)$, en $\mathbb{N}$ komt overeen met $(1,1,1...)$. 
+Het is duidelijk dat deze notatie een bijectie is tussen $P(\mathbb{N})$ en $2^{\mathbb{N}}$, omdat voor een willekeurige $A$ en elke element $k \in \mathbb{N}$ er maar twee mogelijkheden zijn: $k \in A$ of $k \notin A$, en omdat er \'e\'en-op-\'e\'en relatie is tussen elke natuurlijk getal, en elke positie in een oneindige rij nullen en enen. 
+
+%TODO: iets formelere bewijzen dat dit een bijectie is?? 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Equipotentie \texorpdfstring{$P(\mathbb{N})$}{} en \texorpdfstring{$\mathbb{R}$}{}}
+% bonusvraag: Bewijs dat P(N) equipotent is met R.
+Bijectie nodig. Inspiratie te vinden, zie opdracht. 
+Moet helemaal juist zijn, of anders punten afgetrokken:???? 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{9}
+\bibitem{wiki_en_cohen} Wikipedia Engels, \url{https://en.wikipedia.org/wiki/Paul_Cohen}, geraadpleegd op 9/11/2023. 
+\bibitem{wiki_nl_cohen} Wikipedia Nederlands, \url{https://nl.wikipedia.org/wiki/Paul_Cohen}, geraadpleegd op 10/11/2023. 
+\bibitem{sarnak} Peter Sarnak, Remembering Paul Cohen, Notices of the AMS, volume 57, nummer 7, Augustus 2010.
+\bibitem{wiki_nl_fields} Wikipedia Nederlands, \url{https://nl.wikipedia.org/wiki/Fieldsmedaille}, geraadpleegd op 10/11/2023. 
+\bibitem{wiki_en_cont} Wikipedia Engels, \url{https://en.wikipedia.org/wiki/Continuum_hypothesis}, geraadpleegd op 10/11/2023. 
+\bibitem{wiki_en_hilb23} Wikipedia Engels, \url{https://en.wikipedia.org/wiki/Hilbert%27s_problems}, geraadpleegdd op 10/11/2023. 
+
+%%%% hierboven = H1 
+\bibitem{bew&red}
+Arno Kuijlaars, Bewijzen en Redeneren, cursustekst van KU Leuven, academiejaar 2023-2024.
+%%%%DRAFT
+\bibitem{test} MAG WEG, Godel, Kurt. “What Is Cantor’s Continuum Problem?” The American Mathematical Monthly, vol. 54, no. 9, 1947, pp. 515–25. JSTOR, https://doi.org/10.2307/2304666. Accessed 9 Nov. 2023.
+\end{thebibliography}
+
+
+\end{document}
+
+Maak een tex-bestand met de naam Achternaam-Voornaam.tex. Deze naamgeving is verplicht. Compileer naar een pdf-bestand, dat dan automatisch de naam Achternaam-Voornaam.pdf zal krijgen.
+
+Dien uw pdf- en tex-bestand als volgt in ... 
+
+Je kunt eventueel een extra bestand, met bv. een figuur toevoegen. Dit is echter niet verplicht.
+
+Voorzie een aantal gecentreerde formules van een nummer. Zorg ervoor dat tenminste 1 keer naar een formule terugverwezen wordt. 
+
+Gebuik de LATEX commando’s \label en \ref of \eqref.  
+
+Maak een referentielijst waarin u de gebruikte literatuur vermeldt. 
+Als u een resultaat uit de cursus gebruikt, vermeld dat dan en neem in dat geval de cursustekst op in de lijst van referenties. 
+Verwijs naar de referenties met het commando \cite. 
+
+Er is nog geen standaardmanier om naar webpagina’s te verwijzen. 
+Geef voldoende informatie om de lezer in staat te stellen de webpagina goed te kunnen terugvinden. 
+Vermeld de auteur als die bekend is. 
+Vermeld anders ”Anoniem”. Voorbeelden zijn
+[1] T. Tao, Bounding sums or integrals of non-negative quantities,
+Terence Tao website, 30 September 2023,
+
+<terrytao.wordpress.com/2023/09/30/bounding-sums-or-
+integrals-of-non-negative-quantities>
+
+geraadpleegd op 5 november 2023.
+[2] J. J. O’Connor and E. F. Robertson, biography of Augustin Louis
+Cauchy in MacTutor History of Mathematics Archive,
+
+<www-history.mcs.st-andrews.ac.uk/Biographies/Cauchy> geraadpleegd op 5 november 2023.
+
+Zorg ervoor dat uw tekst een op zichzelf staand document is dat gelezen kan worden door iemand die deze opdracht niet kent. 
+Maak goede en volledige zinnen.
+
+\usepackage{amsthm}
+
