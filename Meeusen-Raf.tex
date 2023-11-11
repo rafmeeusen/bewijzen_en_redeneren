@@ -1,13 +1,13 @@
 \documentclass[hidelinks,11pt,a4paper]{article}
 \usepackage[dutch]{babel}
-\usepackage{amssymb}
-\usepackage{hyperref} 
-\usepackage{amsmath}
-
+\usepackage{amssymb, amsthm, hyperref, amsmath} 
+\newtheorem{stelling}{Stelling}
+\newtheorem{lemma}[stelling]{Lemma}
 
 \title{LaTeX opdracht Bewijzen en Redeneren 2023}
 \author{Raf Meeusen, s0050110}
 \date{11 november 2023}
+
 
 \begin{document}
 \maketitle
@@ -33,110 +33,158 @@ Noot: de geraadpleegde bronnen voor dit stukje over Paul Cohen zijn:
 \cite{wiki_en_cohen}, \cite{wiki_nl_cohen}, \cite{sarnak}, \cite{wiki_nl_fields}, \cite{wiki_en_cont}, \cite{wiki_en_hilb23}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Andere formulering continu\"umhypothese}
+\section{Continu\"umhypothese}
 \label{sec_conthyp}
 % Opdracht 2 Bewijs dat de continuumhypothese equivalent is met de volgende bewering:
 % Als X een overaftelbare deelverzameling van R is, dan is er een injectieve functie van R naar X.
 
-%TODO: beetje herschrijven, zodat ik genummerde formules heb
+In dit hoofdstuk bewijzen we dat een alternatieve formulering van de continu\"um\-hypothese equivalent is met de formulering uit onze cursus (\cite{bew&red}). 
 
-De continu\"umhypothese zoals geformuleerd in \cite{bew&red} luidt: 
-Er bestaat geen verzameling $X$ met $\aleph_0 < |X| < 2^{\aleph_0}$. 
+De continu\"um\-hypothese zoals geformuleerd in de cursus, beperkt tot deelverzamelingen van $\mathbb{R}$, luidt: 
+\begin{equation}
+\label{conthyp_1}
+\neg ( \exists X \subset \mathbb{R} : \aleph_0 < |X| < 2^{\aleph_0} ) 
+\end{equation}
+
 Hierbij is $\aleph_0$ de kardinaliteit van $\mathbb{N}$, en is $2^{\aleph_0}$ de kardinaliteit van $\mathbb{R}$. 
 
-In dit hoofdstuk bewijzen we dat voor deelverzamelingen van $\mathbb{R}$ de volgende bewering equivalent is met de continu\"umhypothese: 
-Als X een overaftelbare deelverzameling van $\mathbb{R}$ is, dan is er een injectieve functie van $\mathbb{R}$ naar $X$.
+Een alternatieve formulering is: 
+\begin{equation}
+\label{conthyp_alt}
+X \subset \mathbb{R} \text{ is overaftelbaar } \implies \exists \text{ injectieve } f: \mathbb{R} \rightarrow X.
+\end{equation}
 
-\emph{Bewijs.} Herformuleren we eerst de continu\"umhypothese als volgt. Voor alle verzamelingen $X \subset \mathbb{R}$ geldt: 
-$|X| \leq |\mathbb{N}| $ of $|X| \geq |\mathbb{R}|$. En we herformuleren de equivalente formulering door equivalentie van ($P \implies Q$) en ($\neg P \lor Q$) als volgt. Voor alle verzamelingen $X \subset \mathbb{R}$ geldt: ofwel is $X$ niet overaftelbaar, ofwel bestaat er een injectieve functie van $\mathbb{R}$ naar $X$. 
+We herschrijven eerst beide beweringen via logische regels. 
 
+\eqref{conthyp_1} kunnen we ook schrijven als: 
+\begin{equation}
+\label{conthyp_2}
+\forall X \subset \mathbb{R} : |X| \leq |\mathbb{N}| \lor |X| \geq |\mathbb{R}| 
+\end{equation}
+
+\eqref{conthyp_alt} kunnen we herschrijven via equivalentie van ($P \implies Q$) en ($\neg P \lor Q$): 
+\begin{equation}
+\label{conthyp_alt2}
+\forall X \subset \mathbb{R} :  (X \text{ is niet overaftelbaar }) \lor (\exists \text{ injectieve } f: \mathbb{R} \rightarrow X)
+\end{equation}
+
+We bewijzen nu dat \eqref{conthyp_2} en \eqref{conthyp_alt2} equivalente beweringen zijn. 
+
+\begin{proof}
 Om de equivalentie te bewijzen, bewijzen we twee implicaties.  
 
-Eerste implicatie: $X$ is een willekeurige deelverzameling van  $\mathbb{R}$, en er zijn twee gevallen. 
+Bewijs van \eqref{conthyp_2} $\implies$ \eqref{conthyp_alt2}: Neem $X$ een willekeurige deelverzameling van $\mathbb{R}$. Uit \eqref{conthyp_2} volgt dat er twee gevallen zijn. 
 Geval 1: $|X| \leq |\mathbb{N}| $. 
 Geval 2: $|X| \geq |\mathbb{R}|$. 
-Voor geval 1, kunnen we rechtstreeks besluiten dat $X$ aftelbaar is, dus niet overaftelbaar, waarmee implicatie 1 geval 1 bewezen is. 
-Voor geval 2 volgt uit de definitie van $\leq$ voor kardinaliteiten dat er een injectieve functie bestaat van $\mathbb{R}$ naar $X$, waarmee implicatie 1 geval 2 ook bewezen is. 
+Voor geval 1, kunnen we rechtstreeks besluiten dat $X$ aftelbaar is, dus niet overaftelbaar, waarmee geval 1 bewezen is. 
+Voor geval 2 volgt uit de definitie van $\leq$ voor kardinaliteiten dat er een injectieve functie bestaat van $\mathbb{R}$ naar $X$, waarmee geval 2 ook bewezen is. 
 
-Tweede implicatie: $X$ is een willekeurige deelverzameling van  $\mathbb{R}$, en er zijn ook hier twee gevallen. 
+Bewijs van \eqref{conthyp_alt2} $\implies$ \eqref{conthyp_2}: : $X$ is een willekeurige deelverzameling van  $\mathbb{R}$, en er zijn ook hier twee gevallen. 
 Geval 1: $X$ niet overaftelbaar. 
 Geval 2: er bestaat een injectieve functie van $\mathbb{R}$ naar $X$. 
 Voor geval 1 is gegeven dat $X$ niet overaftelbaar is, $X$ is bijgevolg aftelbaar, en is $|X|$ ofwel eindig ($|X| < |\mathbb{N}|$ of wel aftelbaar oneindig ($|X| = |\mathbb{N}|$), bijgevolg $|X| \leq |\mathbb{N}| $, waarmee geval 1 bewezen is. 
 Voor geval 2 is gegeven dat er een injectieve functie bestaat van $\mathbb{R}$ naar $X$, waardoor we per definitie kunnen schrijven dat $|X| \geq |\mathbb{R}|$, waarmee ook dit geval bewezen is. 
-\emph{QED} 
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overaftelbare verzameling}
+\label{sec_overaft}
 % Opdracht 3 Formuleer de bewering dat P(N) equipotent is met 2^N als een stelling.
 % Bewijs vervolgens deze stelling door een expliciete functie P(N) -> 2^N te definieen en te bewijzen dat dit een bijectie is.
+In dit hoofdstuk bewijzen we volgende stelling: 
 
-\emph{Stelling}: $ P(\mathbb{N})$ is equipotent met $2^{\mathbb{N}} = \{ f \mid f : \mathbb{N} \rightarrow \{0,1\} \text{ is een functie}  \} $
+\begin{stelling}
+\label{stelling_overaftelbaar}
+$ P(\mathbb{N})$ is equipotent met $2^{\mathbb{N}} = \{ f \mid f : \mathbb{N} \rightarrow \{0,1\} \text{ is een functie}  \} $
+\end{stelling}
 
-In dit hoofdstuk bewijzen we deze stelling. 
+De verzameling $2^{\mathbb{N}}$ kan gezien worden als de verzameling van alle oneindige rijen bestaande uit nullen en enen, waarbij de functiewaarde van elke natuurlijk getal te vinden is door te kijken naar de 0 of 1 op positie in de rij die overeenkomt met het natuurlijk getal. 
+Bewijzen we nu stelling \ref{stelling_overaftelbaar}: 
 
-\emph{Bewijs}: 
-We defini\"eren een functie van een willekeurig element $A \in P(\mathbb{N}) $ naar een welbepaald element in $2^{\mathbb{N}}$ als volgt. We kunnen een willekeurige $A \subset \mathbb{N}$ noteren als een oneindige rij nullen en enen, waarbij een $0$ staat voor \emph{'$A$ bevat overeenkomstige natuurlijk getal niet'}, en een $1$ staat voor \emph{'$A$ bevat het overeenkomstige natuurlijk getal'}. Bijvoorbeeld: als $A = \{0, 3, 5\}$, dan is de rij $(1,0,0,1,0,1,0,0,0...)$. De twee triviale voorbeelden: $\emptyset$ komt overeen met $(0,0,0...)$, en $\mathbb{N}$ komt overeen met $(1,1,1...)$. 
-Het is duidelijk dat deze notatie een bijectie is tussen $P(\mathbb{N})$ en $2^{\mathbb{N}}$, omdat voor een willekeurige $A$ en elke element $k \in \mathbb{N}$ er maar twee mogelijkheden zijn: $k \in A$ of $k \notin A$, en omdat er \'e\'en-op-\'e\'en relatie is tussen elke natuurlijk getal, en elke positie in een oneindige rij nullen en enen. 
+\begin{proof}
+We defini\"eren eerst een hulpfunctie $g_A$ voor elke element $A \in P(\mathbb{N})$ als volgt: 
+\begin{equation}
+  g_A: \mathbb{N} \rightarrow \{0,1\}: 
+  g_A(x) = \left\{  
+  \begin{aligned}
+  0, &\text{ als } x \notin A \\
+  1, &\text{ als } x \in A
+  \end{aligned}
+  \right.
+\end{equation}
 
-%TODO: iets formelere bewijzen dat dit een bijectie is?? 
+Het is duidelijk dat voor alle $A\in P(\mathbb{N})$ geldt: $g_A \in 2^{\mathbb{N}}$. 
+Beschouwen we nu de volgende functie $f$ die gebruik maakt van voorgaande hulpfunctie: 
+\begin{equation}
+\label{fun_nat2_binstring}
+f: P(\mathbb{N}) \rightarrow  2^{\mathbb{N}}: f(A) = g_A 
+\end{equation}
+
+Omdat we voor een willekeurige verzameling $A \subset \mathbb{N}$ een unieke rij nullen en enen $g_A$ kunnen construeren die aangeeft welke natuurlijke getallen in $A$ zitten, en welke niet, en dit maar op \'e\'en manier kan, is $f$ injectief. 
+Omgekeerd kunnen we voor een willekeurige rij nullen en enen $g_A$ steeds een deelverzameling $A \subset \mathbb{N}$ vinden zodat $f(A)=g_A$, dus is $f$ surjectief. Bijgevolg is $f$ bijectief. 
+Omdat we een bijectie hebben van $P(\mathbb{N})$ naar $2^{\mathbb{N}}$, zijn deze verzamelingen equipotent. 
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Equipotentie \texorpdfstring{$P(\mathbb{N})$}{} en \texorpdfstring{$\mathbb{R}$}{}}
 % bonusvraag: Bewijs dat P(N) equipotent is met R.
-Bijectie nodig. Inspiratie te vinden, zie opdracht. 
-Moet helemaal juist zijn, of anders punten afgetrokken:???? 
+
+In dit hoofdstuk bewijzen we de volgende stelling: 
+\begin{stelling}
+\label{st_bonus}
+$P(\mathbb{N})$ is equipotent met $\mathbb{R}$ 
+\end{stelling}
+
+We maken hierbij gemakshalve gebruik van de volgende lemmata, die we niet bewijzen, alleen kort toelichten.  
+
+\begin{lemma}
+\label{lemma_2N_int01} 
+Er bestaat een bijectie $f: 2^{\mathbb{N}} \to \mathopen]0,1\mathclose[ $. 
+\end{lemma}
+Toelichting bij Lemma \ref{lemma_2N_int01}: inspiratie voor dit lemma haalden we uit \cite{youtube_penn}, waar een zeer gelijkaardige bewering wordt bewezen. 
+Kort samengevat: we hadden eerder al aangegeven dat een element van $2^{\mathbb{N}}$ kan gezien worden als een oneindige rij nullen en enen. 
+Schrijven we zo'n rij als  $(b_1, b_2, b_3, ...)$, dan kan men inzien dat uit dergelijke rij een re\"eel getal $x \in \mathopen]0,1\mathclose[$ berekend kan worden door de rij te beschouwen als een binaire ontwikkeling, en dat deze ontwikkeling uniek is voor elke $x$: 
+\[ 
+x = \sum_{n=1}^{\infty}{\frac{b_n}{2^n}} = 0,b_1 b_2 b_3 ...  \text{, met } b_n \in \{0,1\} 
+\] 
+
+\begin{lemma}
+\label{lemma_int01_R} 
+De functie $f: \mathopen]0,1\mathclose[ \to \mathbb{R} : f(x) = tan(\pi x - \frac{\pi}{2})$ is bijectief. 
+\end{lemma}
+Toelichting bij Lemma \ref{lemma_int01_R}: door naar de grafiek van deze functie te kijken, kan men inzien dat elke $x$ een unieke $f(x)$ geeft, en omgekeerd, en de functie bijgevolg bijectief is. 
+
+Nu volgt het bewijs van Stelling \ref{st_bonus}. 
+\begin{proof}
+In hoofdstuk \ref{sec_overaft} hebben we bewezen dat er een bijectie $f: P(\mathbb{N}) \to  2^{\mathbb{N}}$ bestaat, zie vergelijking \eqref{fun_nat2_binstring}. 
+Wegens Lemma \ref{lemma_2N_int01} bestaat er een bijectie 
+$g: 2^{\mathbb{N}} \to \mathopen]0,1\mathclose[ $. 
+Wegens Lemma \ref{lemma_int01_R} bestaat er een bijectie 
+$h: \mathopen]0,1\mathclose[ \to \mathbb{R}$. 
+
+Een samenstelling van drie bijecties is bijectief, bijgevolg is $(h \circ g \circ f): P(\mathbb{N}) \to  \mathbb{R}  $ een bijectie, en is $P(\mathbb{N})$ 
+per definitie equipotent met $\mathbb{R}$ . 
+\end{proof}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{9}
-\bibitem{wiki_en_cohen} Wikipedia Engels, \url{https://en.wikipedia.org/wiki/Paul_Cohen}, geraadpleegd op 9/11/2023. 
-\bibitem{wiki_nl_cohen} Wikipedia Nederlands, \url{https://nl.wikipedia.org/wiki/Paul_Cohen}, geraadpleegd op 10/11/2023. 
+\bibitem{wiki_en_cohen} \url{https://en.wikipedia.org/wiki/Paul_Cohen}, Wikipedia Engels, geraadpleegd op 9/11/2023. 
+\bibitem{wiki_nl_cohen} \url{https://nl.wikipedia.org/wiki/Paul_Cohen}, Wikipedia Nederlands, geraadpleegd op op 10/11/2023. 
 \bibitem{sarnak} Peter Sarnak, Remembering Paul Cohen, Notices of the AMS, volume 57, nummer 7, Augustus 2010.
-\bibitem{wiki_nl_fields} Wikipedia Nederlands, \url{https://nl.wikipedia.org/wiki/Fieldsmedaille}, geraadpleegd op 10/11/2023. 
-\bibitem{wiki_en_cont} Wikipedia Engels, \url{https://en.wikipedia.org/wiki/Continuum_hypothesis}, geraadpleegd op 10/11/2023. 
-\bibitem{wiki_en_hilb23} Wikipedia Engels, \url{https://en.wikipedia.org/wiki/Hilbert%27s_problems}, geraadpleegdd op 10/11/2023. 
+\bibitem{wiki_nl_fields}  \url{https://nl.wikipedia.org/wiki/Fieldsmedaille}, Wikipedia Nederlands, geraadpleegd op op 10/11/2023. 
+\bibitem{wiki_en_cont} \url{https://en.wikipedia.org/wiki/Continuum_hypothesis}, Wikipedia Engels, geraadpleegd op op 10/11/2023. 
+\bibitem{wiki_en_hilb23} \url{https://en.wikipedia.org/wiki/Hilbert%27s_problems}, Wikipedia Engels, geraadpleegd op op 10/11/2023.  
+\bibitem{bew&red} Arno Kuijlaars, Bewijzen en Redeneren, cursustekst van KU Leuven, academiejaar 2023-2024. 
+\bibitem{youtube_penn} Micahel Penn, Real Analysis $\mathbb{R}$ and $P(\mathbb{N})$, \url{https://www.youtube.com/watch?v=0fZSb23iFnk}.  
 
-%%%% hierboven = H1 
-\bibitem{bew&red}
-Arno Kuijlaars, Bewijzen en Redeneren, cursustekst van KU Leuven, academiejaar 2023-2024.
-%%%%DRAFT
-\bibitem{test} MAG WEG, Godel, Kurt. “What Is Cantor’s Continuum Problem?” The American Mathematical Monthly, vol. 54, no. 9, 1947, pp. 515–25. JSTOR, https://doi.org/10.2307/2304666. Accessed 9 Nov. 2023.
+
 \end{thebibliography}
 
 
 \end{document}
 
-Maak een tex-bestand met de naam Achternaam-Voornaam.tex. Deze naamgeving is verplicht. Compileer naar een pdf-bestand, dat dan automatisch de naam Achternaam-Voornaam.pdf zal krijgen.
 
-Dien uw pdf- en tex-bestand als volgt in ... 
-
-Je kunt eventueel een extra bestand, met bv. een figuur toevoegen. Dit is echter niet verplicht.
-
-Voorzie een aantal gecentreerde formules van een nummer. Zorg ervoor dat tenminste 1 keer naar een formule terugverwezen wordt. 
-
-Gebuik de LATEX commando’s \label en \ref of \eqref.  
-
-Maak een referentielijst waarin u de gebruikte literatuur vermeldt. 
-Als u een resultaat uit de cursus gebruikt, vermeld dat dan en neem in dat geval de cursustekst op in de lijst van referenties. 
-Verwijs naar de referenties met het commando \cite. 
-
-Er is nog geen standaardmanier om naar webpagina’s te verwijzen. 
-Geef voldoende informatie om de lezer in staat te stellen de webpagina goed te kunnen terugvinden. 
-Vermeld de auteur als die bekend is. 
-Vermeld anders ”Anoniem”. Voorbeelden zijn
-[1] T. Tao, Bounding sums or integrals of non-negative quantities,
-Terence Tao website, 30 September 2023,
-
-<terrytao.wordpress.com/2023/09/30/bounding-sums-or-
-integrals-of-non-negative-quantities>
-
-geraadpleegd op 5 november 2023.
-[2] J. J. O’Connor and E. F. Robertson, biography of Augustin Louis
-Cauchy in MacTutor History of Mathematics Archive,
-
-<www-history.mcs.st-andrews.ac.uk/Biographies/Cauchy> geraadpleegd op 5 november 2023.
-
-Zorg ervoor dat uw tekst een op zichzelf staand document is dat gelezen kan worden door iemand die deze opdracht niet kent. 
-Maak goede en volledige zinnen.
-
-\usepackage{amsthm}
 
