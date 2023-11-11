@@ -19,14 +19,19 @@
 % Gebruik minstens twee onafhankelijke bronnen en geef referenties naar de bronnen die je gebruikt. 
 % Zorg ervoor dat uw beschrijving niet meer dan 30 regels bedraagt.
 We geven hier een korte beschrijving van het leven en werk van Paul Cohen, een 20e-eeuwse wiskundige. 
+
 Paul Cohen is geboren in 1934 in de Amerikaanse staat New Jersey.  
 Hij doctoreerde aan de Universiteit van Chicago in 1958. 
 In december 1963, op 29-jarige leeftijd, publiceerde hij \emph{The independence of the continuum hypothesis}, 
 het eerste bewijs dat de continu\"um\-hypothese niet bewijsbaar is binnen de klassieke verzamelingenleer. 
-De continu\"um\-hypothese heeft een mooie geschiedenis: in 1878 publiceerde Georg Cantor \emph{'Ein Beitrag zur Mannigfaltigkeitslehre'}, waarin hij de continu\"um\-hypothese formuleerde. In 1900 zette David Hilbert dit probleem (een nog onbewezen hypothese) op zijn beroemde lijst van 23 onopgeloste wiskundige problemen. Vervolgens bewees Kurt G\"odel in 1940 - Cohen werd 6 in dat jaar - dat er geen bewijs mogelijk is dat aantoont dat de continu\"um\-hypothese niet waar is. Met andere woorden: G\"odel toonde aan dat de negatie van de continu\"um\-hypothese niet kan bewezen worden. En vervolgens toonde Cohen in 1963 aan dat de continu\"um\-hypothese zelf ook niet kan bewezen worden. 
-Cohen werd door G\"odel gecomplimenteerd voor zijn werk, en in 1966 won Cohen voor zijn werk over de continu\"um\-hypothese de Fieldsmedaille, een zeer belangrijke onderscheiding voor wiskundigen jonger dan 40 jaar. 
+De continu\"um\-hypothese heeft een mooie geschiedenis: in 1878 publiceerde Georg Cantor \emph{'Ein Beitrag zur Mannigfaltigkeitslehre'}, waarin hij de continu\"um\-hypothese formuleerde. In 1900 zette David Hilbert deze onbewezen hypothese op zijn beroemde lijst van 23 onopgeloste wiskundige problemen. Vervolgens bewees Kurt G\"odel in 1940 - Cohen werd 6 in dat jaar - dat er geen bewijs mogelijk is dat aantoont dat de continu\"um\-hypothese niet waar is. Met andere woorden: G\"odel toonde aan dat de negatie van de continu\"um\-hypothese niet bewezen kan worden. En vervolgens toonde Cohen in 1963 aan dat ook niet bewezen kan worden dat de continu\"um\-hypothese geldig is. 
+Cohen werd door G\"odel zelf gecomplimenteerd voor zijn werk. 
+In 1966 won Cohen voor dit werk de Fieldsmedaille, een zeer belangrijke onderscheiding voor wiskundigen jonger dan 40 jaar. 
 We komen nog terug op de continu\"um\-hypothese  in hoofdstuk \ref{sec_conthyp} van deze opdracht. 
-Volgens Peter Sarnak heeft Cohen ook gewerkt aan de Riemann hypothese, een ander probleem dat voorkomt op de lijst van 23 problemen van Hilbert. De Riemann hypothese houdt verband met de verdeling van de priemgetallen, en is tot op heden niet bewezen. 
+
+Volgens Peter Sarnak heeft Cohen ook gewerkt aan een ander probleem dat voorkomt op de lijst van 23 problemen van Hilbert: 
+de Riemann hypothese. Deze hypothese houdt verband met de verdeling van de priemgetallen, en is tot op heden niet bewezen. 
+
 Paul Cohen overleed in Californi\"e in 2007 op 72-jarige leeftijd. 
 
 Noot: de geraadpleegde bronnen voor dit stukje over Paul Cohen zijn:
@@ -40,7 +45,7 @@ Noot: de geraadpleegde bronnen voor dit stukje over Paul Cohen zijn:
 
 In dit hoofdstuk bewijzen we dat een alternatieve formulering van de continu\"um\-hypothese equivalent is met de formulering uit onze cursus (\cite{bew&red}). 
 
-De continu\"um\-hypothese zoals geformuleerd in de cursus, beperkt tot deelverzamelingen van $\mathbb{R}$, luidt: 
+De continu\"um\-hypothese zoals geformuleerd in de cursus, hier beperkt tot deelverzamelingen van $\mathbb{R}$, luidt: 
 \begin{equation}
 \label{conthyp_1}
 \neg ( \exists X \subset \mathbb{R} : \aleph_0 < |X| < 2^{\aleph_0} ) 
@@ -82,7 +87,7 @@ Voor geval 2 volgt uit de definitie van $\leq$ voor kardinaliteiten dat er een i
 Bewijs van \eqref{conthyp_alt2} $\implies$ \eqref{conthyp_2}: : $X$ is een willekeurige deelverzameling van  $\mathbb{R}$, en er zijn ook hier twee gevallen. 
 Geval 1: $X$ niet overaftelbaar. 
 Geval 2: er bestaat een injectieve functie van $\mathbb{R}$ naar $X$. 
-Voor geval 1 is gegeven dat $X$ niet overaftelbaar is, $X$ is bijgevolg aftelbaar, en is $|X|$ ofwel eindig ($|X| < |\mathbb{N}|$ of wel aftelbaar oneindig ($|X| = |\mathbb{N}|$), bijgevolg $|X| \leq |\mathbb{N}| $, waarmee geval 1 bewezen is. 
+Voor geval 1 is gegeven dat $X$ niet overaftelbaar is, $X$ is bijgevolg aftelbaar, en dus is $X$ ofwel eindig, ofwel aftelbaar oneindig, bijgevolg $|X| \leq |\mathbb{N}| $, waarmee geval 1 bewezen is. 
 Voor geval 2 is gegeven dat er een injectieve functie bestaat van $\mathbb{R}$ naar $X$, waardoor we per definitie kunnen schrijven dat $|X| \geq |\mathbb{R}|$, waarmee ook dit geval bewezen is. 
 \end{proof}
 
