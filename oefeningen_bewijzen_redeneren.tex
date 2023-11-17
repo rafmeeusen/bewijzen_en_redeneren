@@ -1,7 +1,10 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{amsmath} 
+\usepackage{amsmath, amsthm} 
 \usepackage{amsfonts} % moet erbij om verzamelingen N,R... netjes te krijgen
+
+\renewcommand*{\proofname}{Bewijs}
+
 
 % mark paragraphs with empty line instead of indented first line
 \setlength{\parindent}{0em}
@@ -259,7 +262,7 @@ Oef. 4.2.13:
 3.1.2 (b,d), 3.1.3 (a), 3.1.8, 3.2.1, 3.2.3 (a), 3.2.9
 
 
-\section{Oefenzitting 5, 8 nov}
+\section{Oefenzitting 5, 8 nov, H5, wk7}
 
 \subsection{Oefening 5.1.1 p.70 (a)} 
 
@@ -318,10 +321,14 @@ Noot: bewijs vooral overgeschreven, niet zelf redenering gevolgd.
 \subsection{Oefening 5.1.4}
 
 \subsection{Oefening 5.3.2 p.78}
-Gegeven: $X$ eindig, $f:X \rightarrow X$ is een surjectie. Te bewijzen: $f is een bijectie$. 
-Ongerijmde. Stel $f$ geen bijectie. Dan is $f$ geen injectie (want wel surjectief). Dan geldt $|f(X)| < |X|$. ???
-(zie mijn nota's, ik moet dit nog eens bekijken) 
+Gegeven: $X$ eindig, $f:X \rightarrow X$ is een surjectie. Te bewijzen: $f$ is een bijectie. 
 
+Ik denk dat ik volgende van bord heb overgeschreven: 
+Stel niet injectief, dan $\exists x \in X: | f^{-1}\{x\}| > 1$. 
+Definieer $\Tilde{f}: X \setminus f^{-1}(\{x\}) \to X \setminus \{ x \} : y \mapsto f(y)$. 
+Dan is $\Tilde{f}$ een surjectie. En dus is $| X \setminus\{ x\} | \leq | X \setminus f^{-1}(\{ x \}) |$. 
+Dus $| X| -1 \leq |X| - | f^{-1}\{ x\} |$
+En dus : $|X| -1 < |X| -1$. Contradictie. 
 
 \subsection{Oefening 5.4.2}
 
@@ -335,6 +342,127 @@ Oefening 5.53
 
 Extra oefenmateriaal: 5.5.1, 5.5.2, 5.5.4, 5.5.6
 
+
+\section*{Oefenzitting 6, 15 nov, H7, wk8}
+Oefeningen over hoofdstuk 7, week 8. 
+
+Voorbereidingsoefeningen voor thuis.
+
+\subsection*{Oefening 7.1.1 p.104}
+Verzameling W van alle woorden. 
+\begin{itemize}
+    \item [(a)] (x,y) met alle letters van x komen ook voor in y; reflexief, transitief, niet anti-symm (anagrammen bvb. tennis/intens); ook niet symm. ; GEEN orderelatie. 
+    \item [(b)] (x,y) letters van x komen achter elkaar en in dezelfde volgorde voor in y; reflexief; transitief; antisymmetrisch; WEL orderelatie; partieel. 
+    \item [(c)] (x,y) als y na x komt in alfabetisch-lexicografische ordening; niet reflexief; GEEN orderelatie. 
+\end{itemize}
+
+
+\subsection*{Oefening 7.1.9 p.105}
+D: 'deler van' relatie op $\mathbb{N}_0$. Bvb. (1,5), (2,6), (5,100), ... 
+Bewijs dat voor $n,m \in \mathbb{N}_0$ geldt dat $sup \{n,m\} = kgv(n,m)$. 
+\begin{proof}
+Noem $s = sup \{n,m\}$. Dan geldt volgens definitie: 
+\begin{itemize}
+    \item $\forall x \in \{n,m\}: x \text{ deler van } s$ ($s$ is bovengrens), en 
+    \item $s$ is deler van elke mogelijke andere bovengrens.
+\end{itemize}
+Dus $n$ is een deler van $s$ en $m$ is een deler van $s$. Dus $s$ is tegelijk een veelvoud van $n$ en van $m$. 
+Nemen we een willekeurige andere bovengrens $s' \neq s$. Dan geldt, omdat $s$ het supremum is: 
+\begin{itemize}
+    \item $s'$ veelvoud van $n$ en van $m$
+    \item $s$ is een deler van $s'$, of: $s'$ is een veelvoud van $s$ (en $s' \neq s$) 
+\end{itemize}
+Dan volgt: $s' = s + s + ... s$. Bijgevolg is $s$ kleiner dan $s'$, is en $s$ het kgv. 
+\end{proof}
+
+Deel 2 infimum: ik vermoed dat bewijs gelijkaardig verloopt, voorlopig geskipt. 
+
+\subsection*{Oefening 7.3.1 p.111}
+
+\begin{itemize}
+    \item [(a)] niet waar; bvb. $-\sqrt{2}$ en $\sqrt{2}$ ; som is 0
+    \item [(b)] waar; bewijs uit ongerijmde; stel $x+y=\frac{p}{q}$ dan $qx + qy = p$ en $y=\frac{p}{q}-x$; dus $y$ rationaal; tegenspraak
+    \item [(c)] niet waar; bvb. $x=y=\sqrt{2}$ 
+    \item [(d)] waar; bewijs uit ongerijmde; stel $xy=\frac{p}{q}$, dan $y=\frac{p}{qx}$ rationaal; tegenspraak.
+\end{itemize}
+
+\subsection*{Oefening 7.3.3 p.111}
+Bewijs Stelling 7.3.2 geval (2). (stelling op p. 110-111, onvolledigheid van $\mathbb{Q}$). 
+
+Thuis op zitten kauwen. Ondertussen video v/d les gezien. Ik snap het, maar formeel opschrijven moet ik in oefenen. TODO. 
+
+In oefenzitting met Thomas: je kan ook met limieten berekenen. TODO: ook zo eens proberen. 
+
+(Hieronder: oefeningen voor de oefenzitting)
+\subsection*{Oefening 7.1.2 p.104}
+\begin{itemize}
+    \item [(a)] Ja, orderel. en totaaal
+    \item [(b)] Nee, niet anti-symmetrisch
+    \item [(c)] Ja, en totaal. (mijn oplossing: FOUT!!)
+\end{itemize}
+
+Oplossing: ik heb een fout. (c) is niet totaal. Bvb. $(2,-2)$: niet gelijk en ook geen verschillende absolute waarde!! 
+
+\subsection*{Oefening 7.1.6 p. 105} 
+Bewijs dat een supremum van $A \subset X$ ($X$ geordend) uniek is (als het bestaat). 
+Stel we hebben twee suprema: $s_1$ en $s_2$. Beide zijn een bovengrens, dus volgt uit de definitie dat $s_2 \leq s_1$, maar ook $s_1 \leq s_2$. $X$ is geordend dus relatie is antisymmetrisch, hieruit volgt $s_1 = s_2$. 
+
+
+\subsection*{Oefening 7.2.1 p. 108} 
+Gegeven: 
+\begin{itemize}
+    \item $x,y \in \mathbb{R}$
+    \item $0<x<y$
+    \item rekenkundig gemiddelde $g_r = \frac{1}{2}(x+y)$
+    \item meetkundig gemiddelde $g_m = \sqrt{xy}$
+    \item harmonisch gemiddelde $g_h = \frac{2}{\frac{1}{x}+\frac{1}{y}}$
+\end{itemize}
+
+TB 1: $g_r < y$
+Bewijs 1: als $x<y$ dan $\frac{x}{2} < \frac{y}{2}$, en dus $\frac{x}{2} +\frac{y}{2}< y$. QED. 
+
+TB 2: $g_m < g_r$
+Bewijs: de truuk is: omgekeerd maken met als en slechts als ertussen. 
+$\sqrt{xy}<\frac{x+y}{2}$ asa $0 < x^2 - 2xy + y^2$ asa $0 < (y-x)^2$. 
+Dan opkuisen en omdraaien: $y-x>0$ dus $(y-x)^2>0$, dus ...
+
+Andere delen van de oefening voorlopig geskipt. 
+
+
+\subsection*{Oefening 7.2.2 p.109}  
+a) opgelost: hier heel kort, vertrekkend van $0<i$: $i<-1$ en $i<0$, maar ook: $-i<0$. Dus $0<0$, tegenspraak want dan $0 \neq 0$. 
+
+\subsection*{Oefening 7.3.4 p.111-112} 
+opgelet: a en b niet interessant (vooral prullen), maak eerst c. 
+
+Deel c gemaakt op papier: ook uit ongerijmde, stel supremum $b$, ook met gevalsonderscheiding, stel eerst $b^2>2$, dan volgt uit $a$ blabla etc. etc. Doenbaar, had op papier staan.  
+
+\subsection*{Oefening 7.3.5 p.112}
+
+a) oplossing: $max (A)=1, met 1\in A$, $sup( A)=1$, $min(A)$ bestaat niet (bewijs uit ongerijmde, bvb. via $\frac{1}{2}$ van zogenaamde minimum); $inf(A)=0$. Eerst aantonen dat $0$ ondergrens is. OK. $inf(A) \leq 0$. Dan stellen dat infimum niet $0$ is, stel $inf(A)>0 $, schrijven als breuk, dan tegenspraak te vinden. 
+Interessant inzicht: als infimum bestaat en niet in verzameling zit, dan is er geen minimum. Ook bovenaan: als supremum bestaat en niet in verzameling zit, dan is er geen maximum. Want ze zijn eigenlijk hetzelfde qua definitie. 
+
+Extra oefenmateriaal 
+
+
+\subsection*{Oefening 7.1.3}
+\subsection*{Oefening 7.1.10}
+\subsection*{Oefening 7.1.12}
+\subsection*{Oefening 7.4.2 }
+
+
+\section{Oefenzitting 7, 22 nov, H8, wk9}
+
+
+Voorbereidingsoefeningen voor thuis: 
+
+8.1.1, 8.1.3, 8.1.7, 8.3.1  
+
+Oefeningen voor de oefenzitting 
+
+8.1.2, 8.1.5, 8.1.6, 8.2.3, 8.2.4, 8.2.6 
+
+Als er tijd over is  8.3.4, 8.4.1 (geen examenstof) 
 
 
 \section*{NEXT}
