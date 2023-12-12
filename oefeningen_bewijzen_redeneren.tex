@@ -453,15 +453,23 @@ Extra oefenmateriaal
 
 \section{Oefenzitting 7, 22 nov, H8, wk9}
 
+Assistent: Tey (Berendschot). 
+
 
 Voorbereidingsoefeningen voor thuis: 
 
 \subsection{Oefening 8.1.1, p.120}
 Opgave: bewijs gevolg 8.1.5 (op p.117). 
 
+Gevolg 8.1.5: 
 \begin{itemize}
-    \item [(a)] $a,b \in \mathbb{R}$
+    \item [(a)] $a,b \in \mathbb{R}, a>0$, dan is er een $n \in \mathbb{N}_0 $ met $an>b$. 
+    \item [(b)] $a \in \mathbb{R}, a>0 $, dan is er een $n \in \mathbb{N}_0 $ met $1/n < a$. 
 \end{itemize}
+
+Dit is gevolg van propositie 8.1.4 (Archimedische eigenschap re\"ele getallen): voor elke $x \in \mathbb{R}$ is er een $n \in \mathbb{N}$ met $x<n$. 
+
+Bewijs voor (a): Neem $\frac{b}{a}$, wat ook in $\mathbb{R}$ zit. Wegens Archimedische eigenschap  re\"ele getallen: er bestaat een $n \in \mathbb{N}$ met $\frac{b}{a}<n$, en dus $b<an$ ($a>0$ dus orde blijft bewaard na vermenigvuldiging met $a$). 
 
 
 \subsection{Oefening 8.1.3, p.120}
@@ -473,8 +481,13 @@ Opgave: bewijs gevolg 8.1.5 (op p.117).
 
 
 \subsection{Oefening 8.1.7, p.120}
-Gegeven supremumeigenschap op totaal georden veld. Bewijs dat ook infimumeigenschap. 
-op papier gedaan; idee besproken met Tey. 
+Gegeven supremumeigenschap op totaal geordend veld $(\mathbb{F},+,\cdot, \leq)$. Bewijs dat ook infimumeigenschap geldt. 
+Oops, ik dacht dat ik dit rap kon bewijzen, maar ben gewoon de mist in gegaan, helemaal verkeerd en te eenvoudig opgevat/te kort door de bocht gegaan! 
+Ten eerste: supremumeigenschap is niet het bestaan van een supremum in $F$, maar wel: elke niet-lege naar boven begrensde deelverzameling heeft een supremum. 
+Dus we moeten vertrekken van een willekeurige naar boven begrensde verzameling $X \subset F$. Deze heeft dan per gegeven een supremum. 
+Ik denk dat we dan moeten kijken naar $\{ -x | x \in X  \}$. In deze verzameling is de orde omgekeerd als we overeenkomstige $x$ bekijken, deze verzameling is naar onder begrensd, en we kunnen alles omdraaien. Hiervoor gaat het waarschijnlijk wel allemaal kloppen. 
+
+
 
 \subsection{Oefening 8.3.1, p.124}  
 Bewijs dat vgl (8.10) een equivalentierelatie op $\mathbb{N} \times \mathbb{N}$. Vergelijking (8.10) is: \[
@@ -491,36 +504,143 @@ Oefeningen voor de oefenzitting
 
 \subsection{8.1.2, p.120}
 Zij $a<b$. Laat zien dat interval $] a,b[ $ oneindig veel rationale getallen bevat, en ook oneindig veel irrationale getallen. 
-Op papier klaar met tips van Tey. Nog uitschrijven. 
+Nogal lang op zitten zoeken. Eerste idee: via bijectie f van $] a,b[ $ naar $\mathbb{R}$. Ander idee: via propositie 8.1.8, dat $\mathbb{Q}$ dicht ligt in $\mathbb{R}$ (tussen elke 2 re\"ele getallen ligt nog een rationaal getal). 
+
+Gevonden met tips van Tey: 
+\begin{itemize}
+    \item kan je er 1 vinden? 
+    \item en kan je er een tweede vinden? 
+\end{itemize}
+
+Bewijs voor (a) oneindig veel rationale getallen: 
+Nemen we twee re\"ele getallen $x,y \in ] a,b [, x<y$.  Kan altijd, bijvoorbeeld rekenkundig gemiddelde $y = g_r = \frac{a+b}{2}$ en meetkundig gemiddelde $x = g_m = \sqrt{a b} $ van de grenzen van het interval. We hebben dan $a < x < y <b$ met $x,y \in ] a,b [$. 
+Aangezien  $\mathbb{Q}$ dicht ligt in $\mathbb{R}$: $\exists q_1 \in \mathbb{Q}: x < q_1 < y$. 
+Via dezelfde eigenschap toegepast op $q_1$ en $y$, vinden we ook een $q_2$ zodat:  $x < q_1 < q_2 < y$. Hierbij liggen $q_1$ en $q_2$ duidelijk in het interval.
+We kunnen zo oneindig doorgaan, waarmee bewezen is dat er oneindig veel rationale getallen in het interval liggen. 
+
+Redenering voor irrationale getallen: hoe vind ik het eerste? Ik weet bijvoorbeeld dat $ 0< \frac{\sqrt{2}}{2} < 1$ irrationaal is. Ik weet ook dat bijgevolg $ 0 < (q_2-q_1)\frac{\sqrt{2}}{2}   < q_2 - q_1 $ als $q_1<q_2$, en dit getal nog steeds irrationaal is (product van rationaal en irrationaal is irrationaal). Dus ook: $ q_1  < q_1+ (q_2-q_1)\frac{\sqrt{2}}{2}   < q_2 $ is irrationaal. 
+
+Bewijs voor (b) oneindig veel irrationale getallen: we vinden via vorige bewijs altijd twee rationale getallen zodat $a < q_1 < q_2 < b$. Nemen we dan $x_{i1} = q_1+ (q_2-q_1)\frac{\sqrt{2}}{2}$. Dan is $x_{i1}$ irrationaal, en dan geldt $a < q_1 < x_{i1} < q_2 < b$. Vanaf nu kunnen we oneindig veel nieuwe irrationale getallen $x_{i2}, x_{i3}, ... $ vinden door te stellen $x_{i(j+1)} = \frac{x_{ij}+q_2}{2} $, met andere woorden het rekenkundig gemiddelde tussen laatst gevonden irrationaal getal, en $q_2$. 
+QED. 
  
 \subsection{8.1.5, p.120}
+Dit volgt rechtstreeks uit oefening 8.1.2. 
+
  
 \subsection{8.1.6, p.120}
 ivm driehoeksongelijkheid
 
+Ik dacht: eens kijken hoe de driehoeksongelijkheid bewezen is in de cursus. Wat blijkt: bewijs niet in cursus. 
+Dus waarom niet eens eerste de gewone driehoeksongelijkheid proberen bewijzen: $| x + y | \leq |x| + |y|$ (vgl. 8.4 in cursus). 
+Wat eigenschappen opgeschreven, wat zitten nadenken, maar niks elegant gevonden. Alleen via gevalsonderscheid die ook definitie van absolute waarde zit, geraak ik er. En blijkt dat ongelijkheid alleen geldt als $x$ en $y$ tegengesteld teken hebben. 
+
+
+
 \subsection{8.2.3, p.121}
-, 
+Vraag gesteld: notatie $:=$, betekent die "per definitie"? Tey zei van wel, maar zei ook: gebruik dat zelf maar niet, en zet altijd in woorden er bij als iets een definitie is. 
+Oefening niet meer afgemaakt. 
+
 \subsection{8.2.4, p.121}
-, 
-\subsection{8.2.6, p.122}
  
+\subsection{8.2.6, p.122}
 
 Als er tijd over is  8.3.4, 8.4.1 (geen examenstof) 
 
-
-\section{Oefenzitting 8, H9}
+\section{Oefenzitting 8, 29 nov, H9, wk10}
+(wk 10 niet gegaan) 
 
 Voorbereidingsoefeningen voor thuis.
 
-9.2.2 (a), 9.2.5, 9.3.1, 9.4.1  
+
+\subsection{9.2.2 (a) p.136}
+
+Tijdens maken oefening, vroeg ik me af: mag ik worteltrekken over een $<$ of $\leq$? 
+Voor positieve re\"ele ongelijkheden lijkt me dit geen probleem. 
+
+Gegeven: $(a_n)$ met $a_n = \frac{2}{\sqrt{n}}$, $n \in \mathbb{N}_0$
+
+T.B. \[
+\lim_{n \to \infty} a_n = 0 \] 
+
+Bewijs: 
+Neem $\epsilon > 0$ willekeurig. En neem dan $n_0 > \frac{4}{\epsilon^2}$. Dan geldt voor alle $n \geq n_0$: $n > \frac{4}{\epsilon^2}$. 
+todo: vervolg...
+
+
+
+\subsection{9.2.5}
+
+\subsection{9.3.1}
+
+
+\subsection{9.4.1} 
+
+
 
 Oefeningen voor de oefenzitting 
 
- 9.2.2 (b), 9.2.4, 9.2.6 (b), 9.3.3 (a), 9.4.4 (tweede limiet), 9.4.5 
+\subsection{9.2.2 (b)}
+
+\subsection{9.2.4}
+
+\subsection{9.2.6 (b)}
+
+\subsection{9.3.3 (a)}
+
+\subsection{9.4.4 (tweede limiet)}
+
+\subsection{9.4.5 }
+
+Als er tijd over is 
+
+\subsection{9.3.4}
+
+\subsection{9.5.1}
+
+
+\section{Oefeningen over H10, wk11}
+
+Theorie: 
+Rij heeft begin maar geen einde. Functie van N naar R, begint algemeen op 0 dus. a0.
+Begrensd vs convergent: 
+Rij die is als sinus : begrensd maar niet convergent. 
+Rij die naar oneindig gaat als n naar oneindig gaat: 
+Niet convergent en niet begrensd. 
+Stelling die zegt: als convergent, dan begrensd. 
+Dus maar drie opties qua combinatie begrensd/convergent. : 
+1. Begrensd convergent
+2. Begrensd niet convergent : dus limiet bestaat niet. 
+3. Onbegrensd 
+
+Dan de lim sup / lim inf : die bestaat wel altijd voor begrensde rijen, en als limiet bestaat zijn lim sup en lim inf er beide aan gelijk. 
+
+Voorbereidingsoefeningen voor thuis.
+
+10.1.1 (a), 10.2.1, 10.2.4 (a) 
+
+
+
+Oefeningen voor de oefenzitting 
+
+ 10.1.1 (b), 10.1.4, 10.1.6, 10.2.2, 10.2.3 (a) 10.2.5 (a), 10.3.3 
 
  Als er tijd over is 
 
-9.3.4, 9.5.1
+10.1.2, 10.2.7, 10.3.8 
+
+\section{Oefeningen over H11, wk12} 
+
+
+Voorbereidingsoefeningen voor thuis
+
+11.1.1 (a), 11.1.3, 11.2.1
+
+Oefeningen voor de oefenzitting 
+
+11.1 (b), 11.1.2, 11.2.2, 11.2.3, 11.2.4
+
+Als er tijd over is 11.3.1
+
 
 \section*{NEXT}
 
