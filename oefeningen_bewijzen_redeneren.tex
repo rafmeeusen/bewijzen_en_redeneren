@@ -600,17 +600,7 @@ Als er tijd over is
 
 \section{Oefeningen over H10, wk11}
 
-Theorie: 
-Rij heeft begin maar geen einde. Functie van N naar R, begint algemeen op 0 dus. a0.
-Begrensd vs convergent: 
-Rij die is als sinus : begrensd maar niet convergent. 
-Rij die naar oneindig gaat als n naar oneindig gaat: 
-Niet convergent en niet begrensd. 
-Stelling die zegt: als convergent, dan begrensd. 
-Dus maar drie opties qua combinatie begrensd/convergent. : 
-1. Begrensd convergent
-2. Begrensd niet convergent : dus limiet bestaat niet. 
-3. Onbegrensd 
+
 
 Dan de lim sup / lim inf : die bestaat wel altijd voor begrensde rijen, en als limiet bestaat zijn lim sup en lim inf er beide aan gelijk. 
 
@@ -630,14 +620,42 @@ Oefeningen voor de oefenzitting
 
 \section{Oefeningen over H11, wk12} 
 
-
 Voorbereidingsoefeningen voor thuis
 
-11.1.1 (a), 11.1.3, 11.2.1
+\subsection{11.1.1 p.171} 
+
+Lang op gewerkt! 
+Vooral omdat eerst proberen te bewijzen, vooral bij b) toch. 
+Bij a) al vrij snel aan gedacht om die harmische reeks eens te bekijken. 
+Zie wat achtergrond/redenering na mijn antwoorden. 
+
+a) antwoord: nee. Tegenvoorbeeld: $(a_n)$ met $a_n = \sum_{k=1}^n \frac{1}{n}$. 
+Deze rij divergeert, is dus geen Cauchyrij. En toch geldt dat $ |a_{n+1} - a_n| $ willekeurig klein kan worden door $n_0$ groot genoeg te kiezen: 
+\[ |a_{n+1} - a_n| = \frac{1}{1+n} \] 
+Noot: als we willen dat $|a_{n+1} - a_n| < \varepsilon$ dan moet dus $\frac{1}{1+n} < \varepsilon$ , wat zeker zo is als $n > \frac{1}{\varepsilon}$, dus een keuze $n_0 = \frac{1}{\varepsilon} $ zou de gevraagde voorwaarde geldig maken voor willekeurige $\varepsilon$. 
+
+b) en indien begrensd? 
+Antwoord: nog altijd niet. Tegenvoorbeeld: de rij $(a_n)$ met $a_n = \sin (\ln x)$. 
+Of ook: de rij $(b_n)$ met $b_n = \sin (\sum_{k=1}^n \frac{1}{n})$. 
+
+Voor b): wat is er specifiek aan de functie onder de sin()? Het zijn functies die eigenlijk gewoon voldoen aan a), ze divergeren naar $+\infty$ in steeds kleinere stapjes. En de sin() zorgt dan voor een oscillatie/alternatie, waardoor er geen onbegrensde divergentie meer is, maar begrensde divergentie. 
+
+Nog andere zienswijze van Cauchyrij: tunnel (zie mijn theorie-samenvatting). Definitie Cauchyrij: willekeurig smalle tunnel. Terwijl de definitie in deze oefening niet zo'n tunnel garandeert, het kan nog altijd naar oneindig ontsporen. 
+
+\subsection{11.1.3}
+
+\subsection{11.2.1} 
 
 Oefeningen voor de oefenzitting 
 
-11.1 (b), 11.1.2, 11.2.2, 11.2.3, 11.2.4
+
+\subsection{11.1.2}
+
+\subsection{11.2.2} 
+
+\subsection{11.2.3} 
+
+\subsection{11.2.4} 
 
 Als er tijd over is 11.3.1
 
